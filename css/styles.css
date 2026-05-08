@@ -214,6 +214,20 @@ body.dev-mode .project-card:hover {
 
 .hero-content { max-width: 1000px; position: relative; }
 .hero-h1 { font-size: var(--fs-h1); margin-left: -5px; }
+
+.hero-subtitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.5rem, 1rem + 2vw, 3rem);
+    color: var(--accent-red);
+    letter-spacing: 0.1em;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+body.dev-mode .hero-subtitle {
+    color: var(--accent-dev);
+}
+
 .hero-p {
     font-size: clamp(1rem, 0.8rem + 0.5vw, 1.3rem);
     color: var(--text-secondary); margin-top: 2rem;
@@ -369,9 +383,55 @@ body.dev-mode .project-card:hover {
 }
 
 .ContactSubmitBtn {
-    justify-self: flex-start; background: var(--accent-red);
-    padding: 1.5rem 4rem; font-size: 1.5rem; border-radius: 0;
-    transition: 0.4s;
+    justify-self: center;
+    background: var(--accent-red);
+    color: white;
+    padding: 1.2rem 4rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.ContactSubmitBtn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.6s;
+}
+
+.ContactSubmitBtn:hover {
+    background: var(--accent-red-bright);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 0, 0, 0.4);
+    letter-spacing: 0.2em;
+}
+
+body.dev-mode .ContactSubmitBtn:hover {
+    box-shadow: 0 15px 40px rgba(0, 229, 255, 0.4);
+}
+
+.ContactSubmitBtn:hover::before {
+    left: 100%;
+}
+
+.ContactSubmitBtn:active {
+    transform: translateY(-2px) scale(0.98);
 }
 
 /* --- Entry Portal - Cinematic Diagonal Masterpiece --- */
@@ -433,18 +493,82 @@ body.dev-mode .project-card:hover {
 .dev-side { --accent-color-hover: rgba(0, 229, 255, 0.05); }
 .portal-link:hover::before { opacity: 1; }
 
-/* Responsive Overrides */
-@media (max-width: 1024px) {
-    .projects-container { columns: 2; }
-    .about-container { grid-template-columns: 1fr; gap: 4rem; }
+/* --- Ultra-Refined Responsive System (Non-Destructive) --- */
+
+/* Tablet & Smaller Desktops */
+@media (max-width: 1200px) {
+    :root { --side-padding: 6vw; }
+    .projects-container { columns: 2; column-gap: 2rem; }
+    .bento-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        grid-auto-rows: minmax(250px, auto);
+    }
 }
 
+/* Mobile & Small Tablets */
 @media (max-width: 768px) {
-    :root { --side-padding: var(--side-padding-mobile); }
-    .hero-h1 { font-size: 5rem; }
-    .projects-container { columns: 1; }
+    :root { 
+        --side-padding: var(--side-padding-mobile); 
+        --fs-h1: 4.5rem; /* Tighter headers for mobile */
+    }
+
+    /* Portal Overhaul for Mobile */
     .portal-overlay { flex-direction: column; }
-    .portal-link { width: 100% !important; height: 50%; margin: 0; clip-path: none !important; }
+    .portal-link { 
+        width: 100% !important; 
+        height: 50vh; 
+        margin: 0; 
+        clip-path: none !important; 
+        border: none;
+    }
+    .art-side { border-bottom: 2px solid var(--accent-red); }
+    .dev-side { border-top: 2px solid var(--accent-dev); }
+    
+    .portal-h2 { font-size: 3.5rem; }
+    .portal-p { font-size: 0.75rem; margin-bottom: 1.5rem; }
+
+    /* Navigation Mobile Polish */
+    .navbar { 
+        top: auto; bottom: 0; left: 0; transform: none;
+        width: 100%; max-width: 100%; border-radius: 0;
+        padding: 15px 0; border-top: 1px solid var(--glass-border);
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.95);
+    }
+    .navbar ul { gap: 1.5rem; }
+    .navbar a { font-size: 0.65rem; letter-spacing: 0.15em; }
+
+    /* Layout & Content Mobile Adjustments */
+    .hero-section { text-align: center; justify-content: center; }
+    .hero-p { border-left: none; border-top: 2px solid var(--accent-red); padding-left: 0; padding-top: 2rem; margin-inline: auto; }
+    body.dev-mode .hero-p { border-top-color: var(--accent-dev); }
+
+    .projects-section { padding-top: 80px; }
+    .projects-container { columns: 1; }
+    .project-card { margin-bottom: 1.5rem; }
+
+    .about-container { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+    .about-text { order: 2; }
+    .about-image { order: 1; max-width: 280px; margin-inline: auto; }
+
+    .software-grid { gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
+    
+    /* Bento Grid Mobile Collapse */
+    .bento-grid { grid-template-columns: 1fr; }
+    .bento-item.large, .bento-item.wide, .bento-item.tall { grid-column: span 1; grid-row: span 1; }
+    .bento-item { padding: 2rem; min-height: 300px; }
+
+    /* Contact Mobile Polish */
+    .ContactSection { padding-bottom: 120px; } /* Space for fixed nav */
+    .ContactSubmitBtn { width: 100%; text-align: center; }
+}
+
+/* Fix for Ultra-Small Devices */
+@media (max-width: 480px) {
+    :root { --fs-h1: 3.5rem; }
+    .navbar ul { gap: 1rem; }
+    .portal-h2 { font-size: 2.5rem; }
+    .floating-toggle-btn { bottom: 85px; right: 20px; width: 50px; height: 50px; } /* Elevate for nav */
 }
 
 /* Footer - Cinematic Minimalism */
