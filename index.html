@@ -10,6 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="entry-portal" class="portal-overlay">
+        <div class="portal-side art-side" data-mode="art">
+            <div class="portal-content">
+                <h2 class="portal-h2">3D ART STATION</h2>
+                <p class="portal-p">Immersive Characters & Environments</p>
+                <div class="portal-btn">ENTER ART</div>
+            </div>
+        </div>
+        <div class="portal-side dev-side" data-mode="dev">
+            <div class="portal-content">
+                <h2 class="portal-h2">DEV UI-UX LAB</h2>
+                <p class="portal-p">Next-Gen Interface Design</p>
+                <div class="portal-btn">ENTER LAB</div>
+            </div>
+        </div>
+    </div>
     
     <nav class="navbar">
         <ul>
@@ -35,68 +51,102 @@
 </section>
 
     <section id="projects" class="projects-section">
-        <!-- Galería de Proy
-        ectos Visuales -->
+        <!-- Galería de Proyectos Visuales -->
+
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="modeling">Modeling</button>
+            <button class="filter-btn" data-filter="vfx">VFX / Animation</button>
+            <button class="filter-btn" data-filter="texturing">Texturing</button>
+        </div>
          
         <div class="projects-container">
-            <div class="project-card">
+            <div class="project-card" data-category="modeling">
                 <div class="card-img-container">
                     <img src="Media/Images/DarkKnight.png" alt="Dark Souls">
                 </div>
                 <video class="hover-video" src="Media/Videos/DarkKnightTurntable_1.webm" muted loop playsinline preload="metadata"></video>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="modeling">
                 <div class="card-img-container">
                     <img src="Media/Images/Mandalorian.jpg" alt="Mandalorian">
                 </div>
                 <video class="hover-video" src="Media/Videos/MandalorianTurntable_1.webm" muted loop playsinline preload="metadata"></video>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="modeling">
                 <div class="card-img-container">
                     <img src="Media/Images/SkullKid.jpg" alt="Zelda">
                 </div>
                 <video class="hover-video" src="Media/Videos/MajoraMaskTurntable_1.webm" muted loop playsinline preload="metadata"></video>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="vfx">
                 <div class="card-img-container">
                     <img src="Media/Images/GirlNetRunner.jpg" alt="Cyberpunk">
                 </div>
                 <video class="hover-video" src="Media/Videos/CoryTurntable_1.webm" muted loop playsinline preload="metadata"></video>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="modeling">
                 <div class="card-img-container">
                     <img src="Media/Images/DekuKid.jpg" alt="DekuKid">
                 </div>
                 <video class="hover-video" src="Media/Videos/DekuKidTurntable_1.webm" muted loop playsinline></video>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="vfx">
                 <div class="card-img-container">
                     <img src="Media/Images/AnnaYamada.png" alt="Anna Yamada">
                 </div>
                 <video class="hover-video" src="Media/Videos/AnnaYamada_1.webm" muted loop playsinline preload="metadata"></video>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="texturing">
                 <div class="card-img-container">
                     <img src="Media/Images/Venom.png" alt="Venom">
                 </div>
                 <video class="hover-video" src="Media/Videos/Venom.webm" muted loop playsinline preload="metadata"></video>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="texturing">
                 <div class="card-img-container">
                     <img src="Media/Images/Spawn.png" alt="Spawn">
                 </div>
                 <video class="hover-video" src="Media/Videos/Spawn.mov" muted loop playsinline preload="metadata"></video>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="texturing">
                 <div class="card-img-container">
                     <img src="Media/Images/ClothSimulation.webp" alt="Cloth Simulation">
                 </div>
                 <video class="hover-video" src="Media/Videos/ClothSimulation.mov" muted loop playsinline preload="metadata"></video>
             </div>
         </div>
+    </section>
 
-       
-        
+    <section id="dev-lab" class="dev-section">
+        <h2 class="section-title">Dev Lab / UI-UX</h2>
+        <div class="bento-grid">
+            <div class="bento-item large">
+                <h3>Project Alpha</h3>
+                <p>UI Design System for FinTech</p>
+                <div class="placeholder">UX Flow Case Study</div>
+            </div>
+            <div class="bento-item wide">
+                <h3>Nexus Hub</h3>
+                <p>Interactive Dashboard Concept</p>
+                <div class="placeholder">React / GSAP</div>
+            </div>
+            <div class="bento-item">
+                <h3>Tooling</h3>
+                <p>Unity Workflow Automation</p>
+                <div class="placeholder">C# Scripts</div>
+            </div>
+            <div class="bento-item">
+                <h3>Mobile App</h3>
+                <p>Eco-Tracker Prototype</p>
+                <div class="placeholder">Figma Design</div>
+            </div>
+            <div class="bento-item wide">
+                <h3>Technical Art</h3>
+                <p>Shader Lab Experiments</p>
+                <div class="placeholder">HLSL / ShaderGraph</div>
+            </div>
+        </div>
     </section>
 
     <section id="about" class="about-section">
@@ -167,8 +217,14 @@
         </form>
     </Section>
 
-    <a href="dev-portfolio.html" id="go-to-dev-btn" class="floating-toggle-btn" title="Portfolio Dev">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 150.6 182.6c12.5-12.5 12.5-32.8 0-45.3z"/></svg>    </a>
+    <a href="javascript:void(0)" id="go-to-dev-btn" class="floating-toggle-btn" title="Toggle Dev/Art Mode">
+        <span class="icon-dev">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 150.6 182.6c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+        </span>
+        <span class="icon-brush">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-24.5 68.3-58.4 81.2C415 354.4 392 394 392 440c0 39.8-32.2 72-72 72c-5.8 0-11.5-.7-17-2c-2.3-.5-4.6-1.1-6.9-1.8c-10.7-3.1-22.3-1.6-32 3.9l-6.2 3.5c-20 11.4-44.1 16.4-67.4 11.6c-48.5-10-85.4-49.8-93.5-98.1c-1.2-7-1.9-14.1-1.9-21.2c0-12 1.4-23.7 4.1-35c.8-3.4 1.3-7 1.3-10.5c0-14.7-10-27.7-24.3-31.4C30 361.6 0 312.4 0 256C0 114.6 114.6 0 256 0S512 114.6 512 256zM136 216a40 40 0 1 0 0-80 40 40 0 1 0 0 80zm48 120a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zM312 176a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM376 296a40 40 0 1 0 -80 0 40 40 0 1 0 80 0z"/></svg>
+        </span>
+    </a>
 
     <script src="js/Script.js"></script>
 
