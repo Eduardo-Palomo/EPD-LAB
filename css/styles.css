@@ -600,35 +600,51 @@ body.dev-mode .floating-toggle-btn .icon-brush {
 }
 
 .software-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    transition: transform 0.3s ease;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 }
 
 .software-item:hover {
-    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-10px) scale(1.05);
+    border-color: var(--accent-red);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-red);
 }
 
 .software-item img {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    filter: grayscale(100%) brightness(0.8);
+    filter: grayscale(100%) brightness(0.7);
     transition: all 0.4s ease;
 }
 
 .software-item:hover img {
-    filter: grayscale(0%) brightness(1);
-    transform: translateY(-5px);
+    filter: grayscale(0%) brightness(1) drop-shadow(0 0 10px var(--accent-red));
 }
 
 .software-item span {
     font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
     color: #ccc;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.software-item:hover span {
+    opacity: 1;
+    color: white;
 }
 
 /* Skills List */
