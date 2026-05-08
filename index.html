@@ -3,310 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo | 3D Generalist Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Eduardo | Creative Portal</title>
+    <link rel="stylesheet" href="css/styles.css?v=1.1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="portal-body">
     <div id="entry-portal" class="portal-overlay">
-        <div class="portal-side art-side" data-mode="art">
+        <a href="art-portfolio.html" class="portal-link art-side">
             <div class="portal-content">
                 <h2 class="portal-h2">3D ART STATION</h2>
-                <p class="portal-p">Immersive Characters & Environments</p>
-                <div class="portal-btn">ENTER ART</div>
+                <p class="portal-p">Digital Sculpting & Cinematic Design</p>
+                <div class="portal-btn">Enter</div>
             </div>
-        </div>
-        <div class="portal-side dev-side" data-mode="dev">
+        </a>
+        <a href="dev-portfolio.html" class="portal-link dev-side">
             <div class="portal-content">
                 <h2 class="portal-h2">DEV UI-UX LAB</h2>
-                <p class="portal-p">Next-Gen Interface Design</p>
-                <div class="portal-btn">ENTER LAB</div>
+                <p class="portal-p">Engineering Next-Gen Interfaces</p>
+                <div class="portal-btn">Enter</div>
             </div>
-        </div>
+        </a>
     </div>
-    
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
-            
-            
-        </ul>
-    </nav>
-
-    <section id="home" class="hero-section">
-    <video autoplay muted loop playsinline id="hero-video" class="hero-video">
-        <source src="Media/Videos/Sequence.mp4" type="video/mp4">
-    </video>
-
-    <div class="hero-content">
-        <h1 class="hero-h1">HELLO <br> I'M EDUARDO</h1>
-        <p class="hero-p">I'm a Technical Artist specialized in character development, environment creation, and interactive experiences...</p>
-    </div>
-</section>
-
-    <section id="projects" class="projects-section">
-        <!-- Galería de Proyectos Visuales -->
-
-        <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="modeling">Modeling & Characters</button>
-            <button class="filter-btn" data-filter="vfx">VFX</button>
-        </div>
-         
-        <div class="projects-container">
-            <div class="project-card" data-category="modeling">
-                <div class="card-img-container">
-                    <img src="Media/Images/DarkKnight.png" alt="Dark Souls">
-                </div>
-                <video class="hover-video" src="Media/Videos/DarkKnightTurntable_1.webm" muted loop playsinline preload="metadata"></video>
-            </div>
-            <div class="project-card" data-category="modeling">
-                <div class="card-img-container">
-                    <img src="Media/Images/Mandalorian.jpg" alt="Mandalorian">
-                </div>
-                <video class="hover-video" src="Media/Videos/MandalorianTurntable_1.webm" muted loop playsinline preload="metadata"></video>
-            </div>
-            <div class="project-card" data-category="modeling">
-                <div class="card-img-container">
-                    <img src="Media/Images/SkullKid.jpg" alt="Zelda">
-                </div>
-                <video class="hover-video" src="Media/Videos/MajoraMaskTurntable_1.webm" muted loop playsinline preload="metadata"></video>
-            </div>
-            <div class="project-card" data-category="modeling">
-                <div class="card-img-container">
-                    <img src="Media/Images/GirlNetRunner.jpg" alt="Cyberpunk">
-                </div>
-                <video class="hover-video" src="Media/Videos/CoryTurntable_1.webm" muted loop playsinline preload="metadata"></video>
-            </div>
-            <div class="project-card" data-category="modeling">
-                <div class="card-img-container">
-                    <img src="Media/Images/DekuKid.jpg" alt="DekuKid">
-                </div>
-                <video class="hover-video" src="Media/Videos/DekuKidTurntable_1.webm" muted loop playsinline></video>
-            </div>
-            <div class="project-card" data-category="modeling">
-                <div class="card-img-container">
-                    <img src="Media/Images/AnnaYamada.png" alt="Anna Yamada">
-                </div>
-                <video class="hover-video" src="Media/Videos/AnnaYamada_1.webm" muted loop playsinline preload="metadata"></video>
-            </div>
-            <div class="project-card" data-category="modeling">
-                <div class="card-img-container">
-                    <img src="Media/Images/Venom.png" alt="Venom">
-                </div>
-                <video class="hover-video" src="Media/Videos/Venom.webm" muted loop playsinline preload="metadata"></video>
-            </div>
-            <div class="project-card" data-category="modeling">
-                <div class="card-img-container">
-                    <img src="Media/Images/Spawn.png" alt="Spawn">
-                </div>
-                <video class="hover-video" src="Media/Videos/Spawn.mov" muted loop playsinline preload="metadata"></video>
-            </div>
-            <div class="project-card" data-category="modeling">
-                <div class="card-img-container">
-                    <img src="Media/Images/ClothSimulation.webp" alt="Cloth Simulation">
-                </div>
-                <video class="hover-video" src="Media/Videos/ClothSimulation.mov" muted loop playsinline preload="metadata"></video>
-            </div>
-            
-            <!-- New VFX Projects -->
-            <div class="project-card" data-category="vfx">
-                <div class="card-img-container">
-                    <video src="Media/Videos/Vfx1.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video>
-                </div>
-            </div>
-            <div class="project-card" data-category="vfx">
-                <div class="card-img-container">
-                    <video src="Media/Videos/Vfx2.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video>
-                </div>
-            </div>
-            <div class="project-card" data-category="vfx">
-                <div class="card-img-container">
-                    <video src="Media/Videos/vfx3.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video>
-                </div>
-            </div>
-            <div class="project-card" data-category="vfx">
-                <div class="card-img-container">
-                    <video src="Media/Videos/vfx4.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video>
-                </div>
-            </div>
-            <div class="project-card" data-category="vfx">
-                <div class="card-img-container">
-                    <video src="Media/Videos/vfx5.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="dev-lab" class="dev-section">
-        <h2 class="section-title">Dev Lab / UI-UX</h2>
-        <div class="bento-grid">
-            <!-- Featured: Game Studio Portfolio -->
-            <div class="bento-item large">
-                <video class="bento-video" src="Media/Videos/PortfolioDev_1.mp4" muted loop playsinline autoplay></video>
-                <div class="featured-badge">Featured Project</div>
-                <h3>Game Studio Portfolio</h3>
-                <p>Personal Portfolio Website</p>
-                <div class="bento-tags">
-                    <span>React + Vite</span>
-                    <span>UI/UX Design</span>
-                    <span>GSAP</span>
-                </div>
-            </div>
-
-            <!-- XR/VR Experiences -->
-            <div class="bento-item wide">
-                <video class="bento-video" src="Media/Videos/DevVRUnrealEngineBluePrints.mp4" muted loop playsinline autoplay></video>
-                <h3>XR-VR Experiences</h3>
-                <p>Advanced Virtual Reality Development</p>
-                <div class="bento-tags">
-                    <span>Unreal Engine</span>
-                    <span>C++</span>
-                    <span>Blueprints</span>
-                </div>
-            </div>
-
-            <!-- Mobile: Credit Card Management -->
-            <div class="bento-item tall">
-                <video class="bento-video" src="Media/Videos/DevMobile.mp4" muted loop playsinline autoplay></video>
-                <div class="featured-badge">Mobile Project</div>
-                <h3>Credit Card Management App</h3>
-                <p>Flutter Mobile Application</p>
-                <div class="bento-tags">
-                    <span>Flutter</span>
-                    <span>Dart</span>
-                    <span>UI/UX</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="about-text">
-                <h2 class="about-h2">About me</h2> 
-                <br>
-                <h3>My name is Jesús Eduardo Palomo Delgado.</h3>
-                <p>I’m Eduardo, a passionate and self-taught 3D artist with over 8 years of experience in modeling, texturing, and environment creation for games and interactive media. Since I was 16, I’ve been honing my skills in various areas of 3D art, including UV/UDIM mapping, stylized and PBR texturing, and real-time integration using Unreal Engine and Unity.I’ve contributed to several independent projects and worked professionally I’m proficient with tools like Blender, Substance Painter, Marmoset Toolbag, and familiar with programming languages such as C# to improve workflows.</p>
-                 <br>
-                <p> I’m always eager to learn and grow, currently expanding my knowledge in programming and automation to complement my artistic skills. I’m looking to connect with other professionals and creative teams to collaborate on exciting projects in the videogame and XR/VR industries.</p>
-            </div>
-            <div class="about-image">
-                <img src="Media/Images/FotografiaPerfil.jpg" alt="Eduardo Profile" class="profile-circle">
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="SkillsSection">
-        <div class="skills-software-container">
-            <h2 class="section-title">My Toolkit & Skills</h2>
-            
-            <div class="software-showcase">
-                <div class="art-stack-wrapper">
-                    <h3 class="subsection-title">3D Art Stack</h3>
-                    <div class="software-grid">
-                        <div class="software-item" title="Blender"><img src="Media/icons/3Dicons/Blender_logo_no_text.svg.png" alt="Blender"><span>Blender</span></div>
-                        <div class="software-item" title="Substance 3D"><img src="Media/icons/3Dicons/adobe-substance-3d-painter-icon.webp" alt="Substance 3D"><span>Substance 3D</span></div>
-                        <div class="software-item" title="Unreal Engine"><img src="Media/icons/3Dicons/unreal-engine-white-icon.webp" alt="Unreal Engine"><span>Unreal Engine</span></div>
-                        <div class="software-item" title="Unity"><img src="Media/icons/3Dicons/why-unitys-new-install-fees-are-spurring-massive-backlash-am_x5cc.768.webp" alt="Unity"><span>Unity</span></div>
-                        <div class="software-item" title="Marmoset Toolbag"><img src="Media/icons/3Dicons/tb4_light-744x652.webp" alt="Marmoset Toolbag"><span>Marmoset</span></div>
-                        <div class="software-item" title="ZBrush"><img src="Media/icons/3Dicons/ZBrush-Logo.jpg" alt="ZBrush"><span>ZBrush</span></div>
-                        <div class="software-item" title="3ds Max"><img src="Media/icons/3Dicons/autodesk-3ds-max-logo.avif" alt="3ds Max"><span>3ds Max</span></div>
-                        <div class="software-item" title="Maya"><img src="Media/icons/3Dicons/autodesk-maya-logo.avif" alt="Maya"><span>Maya</span></div>
-                        <div class="software-item" title="Nuke"><img src="Media/icons/3Dicons/icons8-nuke-144.png" alt="Nuke"><span>Nuke</span></div>
-                    </div>
-                </div>
-
-                <div class="dev-stack-wrapper">
-                    <h3 class="subsection-title">Dev Stack</h3>
-                    <div class="software-grid">
-                        <div class="software-item" title="React"><img src="Media/icons/DevIcons/React.png" alt="React"><span>React</span></div>
-                        <div class="software-item" title="Flutter"><img src="Media/icons/DevIcons/Flutter.png" alt="Flutter"><span>Flutter</span></div>
-                        <div class="software-item" title="Dart"><img src="Media/icons/DevIcons/Dart-logo.png" alt="Dart"><span>Dart</span></div>
-                        <div class="software-item" title="C#"><img src="Media/icons/DevIcons/Csharp.png" alt="Csharp"><span>C#</span></div>
-                        <div class="software-item" title="Figma"><img src="Media/icons/DevIcons/figma_logo_icon_147289.webp" alt="Figma"><span>Figma</span></div>
-                        <div class="software-item" title="Git"><img src="Media/icons/DevIcons/Git_icon.svg.png" alt="Git"><span>Git</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills-showcase">
-                <h3 class="subsection-title">Core Skills</h3>
-                <ul class="skills-list">
-                    <li>3D Modeling & Sculpting</li>
-                    <li>PBR & Stylized Texturing</li>
-                    <li>UV/UDIM Mapping</li>
-                    <li>Environment & Prop Art</li>
-                    <li>Real-time Rendering</li>
-                    <li>Basic C# & Python Scripting</li>
-                    <li>Workflow Optimization</li>
-                    <li>Collaboration & Communication</li>
-                    <li>Scrum workflow</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <Section id="Contact" class="ContactSection">
-        <h2 class="section-title">Get in Touch</h2>
-        <form class="ContactForm" action="https://formsubmit.co/pd.eduardo@outlook.es" method="POST">
-            <!-- Honeypot para evitar SPAM -->
-            <input type="text" name="_honey" style="display:none">
-            <!-- Desactivar Captcha (opcional para mejor UX) -->
-            <input type="hidden" name="_captcha" value="false">
-            
-            <div class="form-group">
-                <label class="ContactLabel" for="fname">First name</label>
-                <input class="ContactInput" type="text" id="fname" name="First Name" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-                <label class="ContactLabel" for="lname">Last name</label>
-                <input class="ContactInput" type="text" id="lname" name="Last Name" placeholder="Your last name" required>
-            </div>
-            <div class="form-group">
-                <label class="ContactLabel" for="Email">Email</label>
-                <input class="ContactInput" type="email" id="Email" name="Email" placeholder="your@email.com" required>
-            </div>
-            <div class="form-group">
-                <label class="ContactLabel" for="Message">Message</label>
-                <textarea class="ContactTextArea" id="Message" name="Message" rows="4" placeholder="Tell me about your project..." required></textarea>
-            </div>
-            <button type="submit" class="ContactSubmitBtn">Send Message</button>
-        </form>
-    </Section>
-
-    <a href="javascript:void(0)" id="go-to-dev-btn" class="floating-toggle-btn" title="Toggle Dev/Art Mode">
-        <span class="icon-dev">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 150.6 182.6c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
-        </span>
-        <span class="icon-brush">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-24.5 68.3-58.4 81.2C415 354.4 392 394 392 440c0 39.8-32.2 72-72 72c-5.8 0-11.5-.7-17-2c-2.3-.5-4.6-1.1-6.9-1.8c-10.7-3.1-22.3-1.6-32 3.9l-6.2 3.5c-20 11.4-44.1 16.4-67.4 11.6c-48.5-10-85.4-49.8-93.5-98.1c-1.2-7-1.9-14.1-1.9-21.2c0-12 1.4-23.7 4.1-35c.8-3.4 1.3-7 1.3-10.5c0-14.7-10-27.7-24.3-31.4C30 361.6 0 312.4 0 256C0 114.6 114.6 0 256 0S512 114.6 512 256zM136 216a40 40 0 1 0 0-80 40 40 0 1 0 0 80zm48 120a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zM312 176a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM376 296a40 40 0 1 0 -80 0 40 40 0 1 0 80 0z"/></svg>
-        </span>
-    </a>
-
-    <script src="js/Script.js"></script>
-
     <footer class="footer">
         <div class="social-links">
-            <a href="https://www.artstation.com/eduardo_palomo" target="_blank" rel="noopener noreferrer" title="ArtStation">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M2.1 377.4l43 74.3c4.3 8.5 10.8 15.7 18.9 20.7s17.4 7.6 27 7.6l285.4 0-59.2-102.6-315.1 0zM501.9 350L335.7 59.3c-4.4-8.2-10.9-15.1-18.9-20S299.7 32 290.4 32l-88.4 0 257.3 447.6 40.7-70.5c1.9-3.2 21-29.7 2-59.1zM275.2 304.5l-115.5-200-115.5 200 231 0z"/></svg>            </a>
-            <a href="https://www.instagram.com/t0rtill4p/" target="_blank" rel="noopener noreferrer" title="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>            </a>
-            <a href="https://x.com/Tortilla_PL" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/eduardo-palomo-59aa6a200" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-            </a>
+            <a href="https://www.linkedin.com/in/eduardo-palomo-59aa6a200" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
         </div>
-        <p>&copy; 2026 Eduardo Palomo Delgado. All rights reserved.</p>
+        <p>&copy; 2026 Eduardo Palomo Delgado. Creative Portal.</p>
     </footer>
-    <header></header>
 </body>
 </html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo | 3D Art Station</title>
+    <link rel="stylesheet" href="css/styles.css?v=1.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body class="art-mode">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <video autoplay muted loop playsinline id="hero-video" class="hero-video video-visible">
+            <source src="Media/Videos/Sequence.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 class="hero-h1">3D ART <br> STATION</h1>
+            <p class="hero-p">Crafting immersive characters, environments, and visual stories for games and cinematic experiences.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="modeling">Modeling & Characters</button>
+            <button class="filter-btn" data-filter="vfx">VFX</button>
+        </div>
+        <div class="projects-container">
+            <div class="project-card" data-category="modeling">
+                <div class="card-img-container"><img src="Media/Images/DarkKnight.png" alt="Dark Souls"></div>
+                <video class="hover-video" src="Media/Videos/DarkKnightTurntable_1.webm" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="project-card" data-category="modeling">
+                <div class="card-img-container"><img src="Media/Images/Mandalorian.jpg" alt="Mandalorian"></div>
+                <video class="hover-video" src="Media/Videos/MandalorianTurntable_1.webm" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="project-card" data-category="modeling">
+                <div class="card-img-container"><img src="Media/Images/SkullKid.jpg" alt="Zelda"></div>
+                <video class="hover-video" src="Media/Videos/MajoraMaskTurntable_1.webm" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="project-card card-no-pop" data-category="modeling">
+                <div class="card-img-container"><img src="Media/Images/GirlNetRunner.jpg" alt="Cyberpunk"></div>
+                <video class="hover-video" src="Media/Videos/CoryTurntable_1.webm" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="project-card" data-category="modeling">
+                <div class="card-img-container"><img src="Media/Images/DekuKid.jpg" alt="DekuKid"></div>
+                <video class="hover-video" src="Media/Videos/DekuKidTurntable_1.webm" muted loop playsinline></video>
+            </div>
+            <div class="project-card" data-category="modeling">
+                <div class="card-img-container"><img src="Media/Images/AnnaYamada.png" alt="Anna Yamada"></div>
+                <video class="hover-video" src="Media/Videos/AnnaYamada_1.webm" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="project-card" data-category="modeling">
+                <div class="card-img-container"><img src="Media/Images/Venom.png" alt="Venom"></div>
+                <video class="hover-video" src="Media/Videos/Venom.webm" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="project-card" data-category="modeling">
+                <div class="card-img-container"><img src="Media/Images/Spawn.png" alt="Spawn"></div>
+                <video class="hover-video" src="Media/Videos/Spawn.mov" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="project-card" data-category="modeling">
+                <div class="card-img-container"><img src="Media/Images/ClothSimulation.webp" alt="Cloth Simulation"></div>
+                <video class="hover-video" src="Media/Videos/ClothSimulation.mov" muted loop playsinline preload="metadata"></video>
+            </div>
+            
+            <!-- VFX Projects -->
+            <div class="project-card" data-category="vfx">
+                <div class="card-img-container"><video src="Media/Videos/Vfx1.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video></div>
+            </div>
+            <div class="project-card" data-category="vfx">
+                <div class="card-img-container"><video src="Media/Videos/Vfx2.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video></div>
+            </div>
+            <div class="project-card" data-category="vfx">
+                <div class="card-img-container"><video src="Media/Videos/vfx3.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video></div>
+            </div>
+            <div class="project-card" data-category="vfx">
+                <div class="card-img-container"><video src="Media/Videos/vfx4.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video></div>
+            </div>
+            <div class="project-card" data-category="vfx">
+                <div class="card-img-container"><video src="Media/Videos/vfx5.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 class="about-h2">About the Artist</h2> 
+                <p>I’m Eduardo, a passionate and self-taught 3D artist with over 8 years of experience. I specialize in the full pipeline of character and environment creation, from high-poly sculpting to engine integration. My goal is to bring digital worlds to life with a focus on visual impact and technical efficiency.</p>
+            </div>
+            <div class="about-image">
+                <img src="Media/Images/FotografiaPerfil.jpg" alt="Eduardo Art" class="profile-circle">
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="SkillsSection">
+        <div class="skills-software-container">
+            <h2 class="section-title">Creative Toolkit</h2>
+            <div class="software-showcase">
+                <div class="art-stack-wrapper" style="display: block;">
+                    <h3 class="subsection-title">3D Art Stack</h3>
+                    <div class="software-grid">
+                        <div class="software-item" title="Blender"><img src="Media/icons/3Dicons/Blender_logo_no_text.svg.png" alt="Blender"><span>Blender</span></div>
+                        <div class="software-item" title="Substance 3D"><img src="Media/icons/3Dicons/adobe-substance-3d-painter-icon.webp" alt="Substance 3D"><span>Substance 3D</span></div>
+                        <div class="software-item" title="ZBrush"><img src="Media/icons/3Dicons/ZBrush-Logo.jpg" alt="ZBrush"><span>ZBrush</span></div>
+                        <div class="software-item" title="Unreal Engine"><img src="Media/icons/3Dicons/unreal-engine-white-icon.webp" alt="Unreal Engine"><span>Unreal</span></div>
+                        <div class="software-item" title="Unity"><img src="Media/icons/3Dicons/why-unitys-new-install-fees-are-spurring-massive-backlash-am_x5cc.768.webp" alt="Unity"><span>Unity</span></div>
+                        <div class="software-item" title="Marmoset"><img src="Media/icons/3Dicons/tb4_light-744x652.webp" alt="Marmoset"><span>Marmoset</span></div>
+                        <div class="software-item" title="3ds Max"><img src="Media/icons/3Dicons/autodesk-3ds-max-logo.avif" alt="3ds Max"><span>3ds Max</span></div>
+                        <div class="software-item" title="Maya"><img src="Media/icons/3Dicons/autodesk-maya-logo.avif" alt="Maya"><span>Maya</span></div>
+                        <div class="software-item" title="Nuke"><img src="Media/icons/3Dicons/icons8-nuke-144.png" alt="Nuke"><span>Nuke</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-showcase">
+                <h3 class="subsection-title">Core Art Skills</h3>
+                <ul class="skills-list art-core-skills" style="display: flex;">
+                    <li>3D Modeling & Sculpting</li>
+                    <li>PBR & Stylized Texturing</li>
+                    <li>UV/UDIM Mapping</li>
+                    <li>Environment & Prop Art</li>
+                    <li>Real-time Rendering</li>
+                    <li>Lighting & Composition</li>
+                    <li>Anatomy & Proportions</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <Section id="Contact" class="ContactSection">
+        <h2 class="section-title">Get in Touch</h2>
+        <form class="ContactForm" action="https://formsubmit.co/pd.eduardo@outlook.es" method="POST">
+            <div class="form-group">
+                <label class="ContactLabel">Name</label>
+                <input class="ContactInput" type="text" name="Name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label class="ContactLabel">Email</label>
+                <input class="ContactInput" type="email" name="Email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label class="ContactLabel">Message</label>
+                <textarea class="ContactTextArea" name="Message" rows="4" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="ContactSubmitBtn">Send Message</button>
+        </form>
+    </Section>
+
+    <a href="dev-portfolio.html" class="floating-toggle-btn" title="Switch to Dev Portfolio">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 150.6 182.6c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+    </a>
+
+    <script src="js/Script.js"></script>
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.artstation.com/eduardo_palomo" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M2.1 377.4l43 74.3c4.3 8.5 10.8 15.7 18.9 20.7s17.4 7.6 27 7.6l285.4 0-59.2-102.6-315.1 0zM501.9 350L335.7 59.3c-4.4-8.2-10.9-15.1-18.9-20S299.7 32 290.4 32l-88.4 0 257.3 447.6 40.7-70.5c1.9-3.2 21-29.7 2-59.1zM275.2 304.5l-115.5-200-115.5 200 231 0z"/></svg></a>
+        </div>
+        <p>&copy; 2026 Eduardo Palomo Delgado. Art Portfolio.</p>
+    </footer>
+</body>
+</html>
