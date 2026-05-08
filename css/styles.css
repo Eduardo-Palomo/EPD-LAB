@@ -353,6 +353,10 @@ h1, h2, .hero-h1 {
     grid-column: span 2;
 }
 
+.bento-item.tall {
+    grid-row: span 2;
+}
+
 .bento-item h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.2rem;
@@ -442,7 +446,7 @@ h1, h2, .hero-h1 {
         grid-template-columns: 1fr;
         grid-auto-rows: 200px;
     }
-    .bento-item.large, .bento-item.wide {
+    .bento-item.large, .bento-item.wide, .bento-item.tall {
         grid-column: span 1;
         grid-row: span 1;
     }
@@ -666,90 +670,109 @@ body.dev-mode .floating-toggle-btn .icon-brush {
 }
 
 .ContactSection {
-    padding: 80px 10%;
-    background: linear-gradient(to bottom, #14141480, var(--design-gradient-color));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70vh; /* Asegura que la sección tenga una altura mínima */
-}
-
-.ContactForm{
+    padding: 120px 10%;
+    background: linear-gradient(to bottom, #020202, #0a0a0a);
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espacio entre elementos del formulario */
-    max-width: 500px;
-    width: 100%; /* Asegura que ocupe el ancho disponible hasta max-width */
-    margin: 0 auto;
-    background-color: var(--bg-FormContact);
-    font-family: oswald, sans-serif;
-    color: #ffffff; /* Texto blanco para contraste con el fondo oscuro */
-    border-radius: 15px;
-    padding: 40px; /* Relleno interno del formulario */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
-    align-items: flex-start;
+    align-items: center;
+    position: relative;
 }
 
-.ContactLabel{
-    display: block; /* Asegura que cada label esté en su propia línea */
+.ContactSection::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent-red), transparent);
+}
+
+.ContactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 600px;
+    width: 100%;
+    margin: 40px auto 0;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ContactLabel {
     text-align: left;
-    font-size: 1.1rem;
-    font-family: oswald, sans-serif;
-    margin-bottom: 5px; /* Espacio debajo del label */
-    color: #e0e0e0; /* Color de texto más claro para labels */
+    font-size: 0.9rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-secondary);
 }
 
 .ContactInput,
 .ContactTextArea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 15px 20px;
     border-radius: 8px;
-    border: 1px solid #444; /* Borde oscuro */
-    background-color: #333; /* Fondo oscuro para los campos */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ContactInput:focus,
 .ContactTextArea:focus {
     outline: none;
-    border-color: var(--bg-ColorNabvarhover); /* Resalta el borde al enfocar */
-    box-shadow: 0 0 0 3px rgba(142, 27, 27, 0.3); /* Sombra de enfoque */
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--accent-red);
+    box-shadow: 0 0 20px rgba(109, 15, 15, 0.2);
 }
 
-.ContactTextArea{
-    min-height: 120px; /* Altura mínima para el área de texto */
-    resize: vertical;
+.ContactTextArea {
+    min-height: 150px;
+    resize: none;
 }
 
 .ContactSubmitBtn {
-    background-color: var(--bg-ColorFloatingBtn);
+    background-color: var(--accent-red);
     color: white;
-    padding: 15px 25px;
+    padding: 15px 50px;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 1.1rem;
-    font-family: 'Oswald', sans-serif;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.4rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(109, 15, 15, 0.3);
+    margin-top: 10px;
 }
 
 .ContactSubmitBtn:hover {
-    background-color: var(--bg-ColorNabvarhover);
-    transform: translateY(-2px);
+    background-color: var(--accent-red-bright);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(109, 15, 15, 0.5);
 }
 
 /* --- Footer --- */
 .footer {
-    padding: 40px 10%;
-    background-color: #0a0a0a; /* Un poco más claro que el fondo del body */
+    padding: 60px 10%;
+    background-color: #000;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 60px; /* Espacio sobre el footer */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .social-links {
@@ -978,6 +1001,18 @@ body.dev-mode .floating-toggle-btn .icon-brush {
     background: radial-gradient(circle at center, var(--accent-red) 0%, transparent 70%);
     opacity: 0;
     transition: opacity 0.6s ease;
+    z-index: 1;
+}
+
+.dev-side::before {
+    background: radial-gradient(circle at center, var(--accent-dev) 0%, transparent 70%);
+}
+
+.portal-side:hover::before {
+    opacity: 0.15;
+}
+
+transition: opacity 0.6s ease;
     z-index: 1;
 }
 
