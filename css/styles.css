@@ -141,8 +141,8 @@ h1, h2, .hero-h1 {
 
 /*Seccion Proyectos */
 .projects-section {
-    padding: 50px 5%;
-    background: linear-gradient(var(--design-gradient-color), #14141480);    
+    padding: 100px 5%;
+    background: var(--bg-color);
     overflow-x: hidden;
 
 /*Para evitar la selección de texto y arrastrar imágenes */
@@ -151,15 +151,13 @@ h1, h2, .hero-h1 {
 }
 
 .projects-container {
-    display: flex;
-    gap: 5px;
-    overflow-x: auto; /* Permitir scroll horizontal (Script lo usa y es mejor semánticamente) */
-    scroll-behavior: smooth; /* Hace que el movimiento sea fluido */
-    padding: 60px 20px; /* Aumentamos el padding arriba/abajo para que el video de 120% y el scale no provoquen scroll vertical */
-    white-space: nowrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    overflow-x: visible;
+    padding: 40px 0;
+    white-space: normal;
     -webkit-user-drag: none;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
 }
 
 .projects-container::-webkit-scrollbar {
@@ -168,11 +166,12 @@ h1, h2, .hero-h1 {
 
 .project-card {
     position: relative;
-    display: inline-block;
-    flex-shrink: 0;
-    width: 300px;
-    height: 450px;
+    width: 100%;
+    height: 500px;
+    background: #0a0a0a;
     border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .project-card .hover-video {
