@@ -543,8 +543,11 @@ h1, h2, .hero-h1 {
 
 /* --- Lógica de Visibilidad de Portafolio e Iconos --- */
 
-/* Por defecto, muestra el portafolio de Arte y el icono de Dev */
+/* Por defecto, muestra el portafolio de Arte y oculta el stack de Dev */
 .dev-section { display: none; }
+.dev-stack-wrapper { display: none; }
+.art-stack-wrapper { display: block; }
+
 .floating-toggle-btn .icon-brush { display: none; }
 .floating-toggle-btn .icon-dev { display: block; }
 
@@ -553,6 +556,12 @@ body.dev-mode .projects-section {
     display: none;
 }
 body.dev-mode .dev-section {
+    display: block;
+}
+body.dev-mode .art-stack-wrapper {
+    display: none;
+}
+body.dev-mode .dev-stack-wrapper {
     display: block;
 }
 body.dev-mode .floating-toggle-btn .icon-dev {
