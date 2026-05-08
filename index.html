@@ -120,31 +120,26 @@
                 <div class="card-img-container">
                     <video src="Media/Videos/Vfx1.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video>
                 </div>
-                <video class="hover-video" src="Media/Videos/Vfx1.mp4" muted loop playsinline preload="metadata"></video>
             </div>
             <div class="project-card" data-category="vfx">
                 <div class="card-img-container">
                     <video src="Media/Videos/Vfx2.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video>
                 </div>
-                <video class="hover-video" src="Media/Videos/Vfx2.mp4" muted loop playsinline preload="metadata"></video>
             </div>
             <div class="project-card" data-category="vfx">
                 <div class="card-img-container">
                     <video src="Media/Videos/vfx3.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video>
                 </div>
-                <video class="hover-video" src="Media/Videos/vfx3.mp4" muted loop playsinline preload="metadata"></video>
             </div>
             <div class="project-card" data-category="vfx">
                 <div class="card-img-container">
                     <video src="Media/Videos/vfx4.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video>
                 </div>
-                <video class="hover-video" src="Media/Videos/vfx4.mp4" muted loop playsinline preload="metadata"></video>
             </div>
             <div class="project-card" data-category="vfx">
                 <div class="card-img-container">
                     <video src="Media/Videos/vfx5.mp4" muted loop playsinline autoplay style="width: 100%; height: 100%; object-fit: cover;"></video>
                 </div>
-                <video class="hover-video" src="Media/Videos/vfx5.mp4" muted loop playsinline preload="metadata"></video>
             </div>
         </div>
     </section>
@@ -173,10 +168,16 @@
                 <p>Unity Workflow Automation</p>
                 <div class="placeholder">C# Scripts</div>
             </div>
-            <div class="bento-item">
-                <h3>Mobile App</h3>
-                <p>Eco-Tracker Prototype</p>
-                <div class="placeholder">Figma Design</div>
+            <div class="bento-item tall">
+                <video class="bento-video" src="Media/Videos/DevMobile.mp4" muted loop playsinline autoplay></video>
+                <div class="featured-badge">Mobile Project</div>
+                <h3>Eco-Tracker</h3>
+                <p>Flutter Mobile Application</p>
+                <div class="bento-tags">
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>UI/UX</span>
+                </div>
             </div>
             <div class="bento-item wide">
                 <h3>Technical Art</h3>
@@ -202,29 +203,9 @@
         </div>
     </section>
 
-    <section class="SkillsSection">
+    <section id="skills" class="SkillsSection">
         <div class="skills-software-container">
             <h2 class="section-title">My Toolkit & Skills</h2>
-            <div class="software-showcase">
-                <h3 class="subsection-title">Software Proficiency</h3>
-                <div class="software-grid">
-                    <!-- NOTA: Reemplaza la ruta si es necesario. Ej: Media/Icons/blender.svg -->
-                    <div class="software-item" title="Blender"><img src="Media/icons/Blender_logo_no_text.svg.png" alt="Blender"><span>Blender</span></div>
-                    <div class="software-item" title="Substance 3D"><img src="Media/icons/adobe-substance-3d-painter-icon.webp" alt="Substance 3D"><span>Adobe Substance 3D</span></div>
-                    <div class="software-item" title="Unreal Engine"><img src="Media/icons/unreal-engine-white-icon.webp" alt="Unreal Engine"><span>Unreal Engine</span></div>
-                    <div class="software-item" title="Unity"><img src="Media/icons/why-unitys-new-install-fees-are-spurring-massive-backlash-am_x5cc.768.webp" alt="Unity"><span>Unity</span></div>
-                    <div class="software-item" title="Marmoset Toolbag"><img src="Media/icons/tb4_light-744x652.webp" alt="Marmoset Toolbag"><span>Marmoset Toolbag</span></div>
-                    <div class="software-item" title="ZBrush"><img src="Media/icons/ZBrush-Logo.jpg" alt="ZBrush"><span>ZBrush</span></div>
-                    <div class="software-item" title="3ds Max"><img src="Media/icons/autodesk-3ds-max-logo.avif" alt="3ds Max"><span>Autodesk 3ds Max</span></div>
-                    <div class="software-item" title="Maya"><img src="Media/icons/autodesk-maya-logo.avif" alt="Maya"><span>Autodesk Maya</span></div>
-                    <div class="software-item" title="Nuke"><img src="Media/icons/icons8-nuke-144.png" alt="Nuke"><span>Nuke</span></div>
-
-
-
-                </div>
-            </div>
-            <div id="skills" class="skills-showcase">
-                <h3 class="subsection-title">Core Skills</h3>
                 <ul class="skills-list">
                     <li>3D Modeling & Sculpting</li>
                     <li>PBR & Stylized Texturing</li>
@@ -241,16 +222,30 @@
     </section>
 
     <Section id="Contact" class="ContactSection">
-        <form class="ContactForm">
-        <label class="ContactLabel" for="fname">First name:</label><br>
-        <input class="ContactInput" type="text" id="fname" name="fname"><br>
-        <label class="ContactLabel" for="lname">Last name:</label><br>
-        <input class="ContactInput" type="text" id="lname" name="lname"><br>
-        <label class="ContactLabel" for="Email">Email:</label><br>
-        <input class="ContactInput" type="text" id="Email" name="Email"><br>
-        <label class="ContactLabel" for="Message">Message:</label><br>
-        <textarea class="ContactTextArea" id="Message" name="Message" rows="4" cols="50"></textarea><br>
-        <button type="submit" class="ContactSubmitBtn">Enviar</button>
+        <h2 class="section-title">Get in Touch</h2>
+        <form class="ContactForm" action="https://formsubmit.co/pd.eduardo@outlook.es" method="POST">
+            <!-- Honeypot para evitar SPAM -->
+            <input type="text" name="_honey" style="display:none">
+            <!-- Desactivar Captcha (opcional para mejor UX) -->
+            <input type="hidden" name="_captcha" value="false">
+            
+            <div class="form-group">
+                <label class="ContactLabel" for="fname">First name</label>
+                <input class="ContactInput" type="text" id="fname" name="First Name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label class="ContactLabel" for="lname">Last name</label>
+                <input class="ContactInput" type="text" id="lname" name="Last Name" placeholder="Your last name" required>
+            </div>
+            <div class="form-group">
+                <label class="ContactLabel" for="Email">Email</label>
+                <input class="ContactInput" type="email" id="Email" name="Email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label class="ContactLabel" for="Message">Message</label>
+                <textarea class="ContactTextArea" id="Message" name="Message" rows="4" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="ContactSubmitBtn">Send Message</button>
         </form>
     </Section>
 
