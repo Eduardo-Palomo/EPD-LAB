@@ -4,14 +4,13 @@
 /*paleta de colores */
 :root {
     --bg-color: #020202;
-    --design-gradient-color: #6d0f0f80; 
-    --dev-gradient-color: #0f4a6d80;    
-    --bg-ColorNabvar: #6d0f0f80;
-    --bg-ColorNabvarhover: #8e1b1b80;   
-    --bg-ColorFloatingBtn: #6d0f0f; 
-    --bg-FormContact: #222222; 
-    
-
+    --accent-red: #6d0f0f;
+    --accent-red-bright: #8e1b1b;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --glass-bg: rgba(2, 2, 2, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --rim-light: radial-gradient(circle, rgba(109, 15, 15, 0.4) 0%, rgba(2, 2, 2, 0) 70%);
 }
 
 /*Animacion de deslizamiento */
@@ -25,17 +24,17 @@ html {
     padding: 0;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif; 
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
 }
 
-body {
-    background-color: #050505;
-    color: white;
-    line-height: 1.6;
+h1, h2, .hero-h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
 }
 
 /* BarradeNavegacion */
