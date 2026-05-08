@@ -367,6 +367,57 @@ h1, h2, .hero-h1 {
     z-index: 2;
 }
 
+.bento-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.5;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bento-item:hover .bento-video {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.bento-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    z-index: 2;
+}
+
+.bento-tags span {
+    font-size: 0.7rem;
+    background: rgba(15, 74, 109, 0.4);
+    border: 1px solid var(--accent-dev);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-dev);
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    z-index: 3;
+    box-shadow: 0 0 15px rgba(15, 74, 109, 0.5);
+}
+
 .bento-item .placeholder {
     position: absolute;
     top: 20px;
