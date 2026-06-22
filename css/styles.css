@@ -529,11 +529,21 @@ body.dev-mode .ContactSubmitBtn:hover {
 
     /* Navigation Mobile Polish */
     .navbar { 
-        top: auto; bottom: 0; left: 0; transform: none;
+        top: 0; bottom: auto; left: 0; transform: none;
         width: 100%; max-width: 100%; border-radius: 0;
-        padding: 15px 0; border-top: 1px solid var(--glass-border);
+        padding: 20px 0; border-top: none;
+        border-bottom: 1px solid transparent;
         justify-content: center;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+    .navbar.scrolled {
+        padding: 12px 0;
         background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
     }
     .navbar ul { gap: 1.5rem; }
     .navbar a { font-size: 0.65rem; letter-spacing: 0.15em; }
@@ -851,28 +861,28 @@ body.dev-mode .social-links a:hover {
 /* Mobile Adjustments for Floating Components */
 @media (max-width: 768px) {
     .floating-toggle-btn {
-        bottom: 30px;
-        right: 30px;
+        bottom: 20px;
+        right: 20px;
         width: 55px;
         height: 55px;
     }
     .floating-toggle-btn::after { display: none; }
 
     .floating-toggle-btn-cv {
-        bottom: 105px;
-        right: 30px;
+        bottom: 90px;
+        right: 20px;
         width: 55px;
         height: 55px;
     }
     .floating-toggle-btn-cv::after { display: none; }
 
     .floating-reel-container {
-        bottom: 30px;
-        left: 30px;
+        bottom: 20px;
+        left: 20px;
         width: 220px;
     }
     .floating-reel-container.collapsed {
-        transform: translateX(-262px);
+        transform: translateX(-252px);
     }
 }
 
