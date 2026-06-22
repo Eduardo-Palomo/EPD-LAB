@@ -795,3 +795,70 @@ body.dev-mode .social-links a:hover {
     .floating-toggle-btn-cv::after { display: none; }
 }
 
+/* --- Floating Demo Reel Player --- */
+.floating-reel-container {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    width: 320px;
+    aspect-ratio: 16/9;
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 6px;
+    z-index: 5000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+    overflow: visible;
+}
+
+.floating-reel-container:hover {
+    border-color: var(--accent-red);
+    box-shadow: 0 0 30px rgba(230, 25, 25, 0.3);
+    transform: translateY(-5px);
+}
+
+.floating-reel-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.close-reel-btn {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #050505;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #888;
+    font-size: 1rem;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5001;
+    transition: all 0.3s ease;
+}
+
+.close-reel-btn:hover {
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+    color: white;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .floating-reel-container {
+        bottom: 25px;
+        left: 25px;
+        width: 200px;
+    }
+}
+
