@@ -15,7 +15,7 @@
 **Files:**
 - Modify: `index.html`
 
-- [ ] **Step 1: Update the filter bar buttons**
+- [x] **Step 1: Update the filter bar buttons**
 Change the labels and data-filters to match the new organization.
 
 ```html
@@ -26,7 +26,7 @@ Change the labels and data-filters to match the new organization.
 </div>
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add index.html
@@ -40,7 +40,7 @@ git commit -m "chore: update filter bar labels"
 **Files:**
 - Modify: `index.html`
 
-- [ ] **Step 1: Move Texturing and VFX characters to "modeling"**
+- [x] **Step 1: Move Texturing and VFX characters to "modeling"**
 Update `data-category` for projects that should now be in the main section.
 
 ```html
@@ -60,7 +60,7 @@ Update `data-category` for projects that should now be in the main section.
 </div>
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add index.html
@@ -74,7 +74,7 @@ git commit -m "feat: reclassify character projects to modeling category"
 **Files:**
 - Modify: `index.html`
 
-- [ ] **Step 1: Add cards for Vfx1 through vfx5**
+- [x] **Step 1: Add cards for Vfx1 through vfx5**
 Insert the new video projects into the `.projects-container`. Use the video as the main source since there are no thumbnails.
 
 ```html
@@ -88,7 +88,7 @@ Insert the new video projects into the `.projects-container`. Use the video as t
 <!-- Repeat for vfx2, vfx3, vfx4, vfx5 -->
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add index.html
@@ -102,10 +102,10 @@ git commit -m "feat: add new vfx video projects to gallery"
 **Files:**
 - Test: Open `index.html` in browser
 
-- [ ] **Step 1: Verify all filters work**
+- [x] **Step 1: Verify all filters work**
 Ensure clicking "Modeling & Characters" shows all characters/models, and "VFX" only shows the 5 new videos.
 
-- [ ] **Step 2: Commit (if any JS fixes were needed)**
+- [x] **Step 2: Commit (if any JS fixes were needed)**
 
 ```bash
 git commit -m "test: verify filtering logic works with new categories"

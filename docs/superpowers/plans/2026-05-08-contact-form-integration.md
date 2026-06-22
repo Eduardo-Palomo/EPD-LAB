@@ -15,7 +15,7 @@
 **Files:**
 - Modify: `index.html`
 
-- [ ] **Step 1: Update form attributes and ensure names are correct**
+- [x] **Step 1: Update form attributes and ensure names are correct**
 Change the `<form>` tag to include the action and method, and verify names match the requirements.
 
 ```html
@@ -47,7 +47,7 @@ Change the `<form>` tag to include the action and method, and verify names match
 </form>
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add index.html

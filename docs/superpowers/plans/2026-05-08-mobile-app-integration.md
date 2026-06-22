@@ -15,7 +15,7 @@
 **Files:**
 - Modify: `css/styles.css`
 
-- [ ] **Step 1: Add the .tall class and adjust video handling**
+- [x] **Step 1: Add the .tall class and adjust video handling**
 Define the spanning logic and ensure vertical videos fit perfectly.
 
 ```css
@@ -32,7 +32,7 @@ Define the spanning logic and ensure vertical videos fit perfectly.
 }
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add css/styles.css
@@ -46,7 +46,7 @@ git commit -m "style: add tall bento item support for vertical mobile apps"
 **Files:**
 - Modify: `index.html`
 
-- [ ] **Step 1: Replace the Mobile App placeholder with the actual video**
+- [x] **Step 1: Replace the Mobile App placeholder with the actual video**
 Update the classes, source, and tags for the Flutter project.
 
 ```html
@@ -63,7 +63,7 @@ Update the classes, source, and tags for the Flutter project.
             </div>
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add index.html

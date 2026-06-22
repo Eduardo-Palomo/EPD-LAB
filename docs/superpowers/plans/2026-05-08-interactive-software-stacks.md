@@ -15,7 +15,7 @@
 **Files:**
 - Modify: `index.html`
 
-- [ ] **Step 1: Replace the single software grid with categorized stacks**
+- [x] **Step 1: Replace the single software grid with categorized stacks**
 Organize the icons into "3D Art Stack" and "Dev Stack" using the assets found in `Media/icons/3Dicons` and `Media/icons/DevIcons`.
 
 ```html
@@ -45,7 +45,7 @@ Organize the icons into "3D Art Stack" and "Dev Stack" using the assets found in
 </div>
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 `git add index.html && git commit -m "feat: categorize software proficiency into 3D and Dev stacks"`
 
 ---
@@ -55,7 +55,7 @@ Organize the icons into "3D Art Stack" and "Dev Stack" using the assets found in
 **Files:**
 - Modify: `css/styles.css`
 
-- [ ] **Step 1: Update icon styles with glow effects and dynamic hover**
+- [x] **Step 1: Update icon styles with glow effects and dynamic hover**
 Make the icons feel like "active modules" with red glow for 3D and blue glow for Dev (in Dev Mode).
 
 ```css
@@ -100,5 +100,5 @@ Make the icons feel like "active modules" with red glow for 3D and blue glow for
 }
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 `git add css/styles.css && git commit -m "style: add cinematic glow and interactive hover to software icons"`

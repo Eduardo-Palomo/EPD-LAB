@@ -16,7 +16,7 @@
 - Modify: `css/styles.css`
 - Modify: `index.html`
 
-- [ ] **Step 1: Write HTML Structure for Diagonal Split**
+- [x] **Step 1: Write HTML Structure for Diagonal Split**
 
 ```html
 <!-- Inside index.html, replace the current portal-overlay content -->
@@ -38,7 +38,7 @@
 </div>
 ```
 
-- [ ] **Step 2: Add CSS for Clip-Path Split**
+- [x] **Step 2: Add CSS for Clip-Path Split**
 
 ```css
 /* Inside css/styles.css, replace existing portal styles */
@@ -76,10 +76,10 @@
 }
 ```
 
-- [ ] **Step 3: Run Visual Verification**
+- [x] **Step 3: Run Visual Verification**
 (Open index.html in browser to ensure the diagonal split renders and hovers correctly).
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 ```bash
 git add index.html css/styles.css
 git commit -m "feat(portal): implement diagonal clip-path split screen"
@@ -93,7 +93,7 @@ git commit -m "feat(portal): implement diagonal clip-path split screen"
 - Modify: `css/styles.css`
 - Modify: `art-portfolio.html`
 
-- [ ] **Step 1: Define Cinematic Variables in CSS**
+- [x] **Step 1: Define Cinematic Variables in CSS**
 
 ```css
 body.art-mode {
@@ -107,7 +107,7 @@ body.art-mode {
 }
 ```
 
-- [ ] **Step 2: Update Project Grid to Masonry Layout**
+- [x] **Step 2: Update Project Grid to Masonry Layout**
 
 ```css
 body.art-mode .projects-container {
@@ -129,10 +129,10 @@ body.art-mode .project-card:nth-child(odd) {
 @media (max-width: 550px) { body.art-mode .projects-container { columns: 1; } }
 ```
 
-- [ ] **Step 3: Run Visual Verification**
+- [x] **Step 3: Run Visual Verification**
 (Open `art-portfolio.html` and verify deep black colors, red accents, and masonry grid layout).
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 ```bash
 git add css/styles.css
 git commit -m "style(art): implement cinematic theme and masonry grid"
@@ -146,7 +146,7 @@ git commit -m "style(art): implement cinematic theme and masonry grid"
 - Modify: `css/styles.css`
 - Modify: `dev-portfolio.html`
 
-- [ ] **Step 1: Define Technical Variables & Monospace Tags**
+- [x] **Step 1: Define Technical Variables & Monospace Tags**
 
 ```css
 body.dev-mode {
@@ -169,7 +169,7 @@ body.dev-mode .bento-tags span, body.dev-mode .dev-core-skills li {
 }
 ```
 
-- [ ] **Step 2: Refine Bento Grid Layered Shadows**
+- [x] **Step 2: Refine Bento Grid Layered Shadows**
 
 ```css
 body.dev-mode .bento-item {
@@ -189,10 +189,10 @@ body.dev-mode .bento-item:hover {
 }
 ```
 
-- [ ] **Step 3: Run Visual Verification**
+- [x] **Step 3: Run Visual Verification**
 (Open `dev-portfolio.html` and verify the navy background, cyan glowing shadows, and monospace fonts on tags).
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 ```bash
 git add css/styles.css
 git commit -m "style(dev): implement technical theme, glowing bento grid, monospace tags"
@@ -205,7 +205,7 @@ git commit -m "style(dev): implement technical theme, glowing bento grid, monosp
 **Files:**
 - Modify: `css/styles.css`
 
-- [ ] **Step 1: Implement Visible Focus States**
+- [x] **Step 1: Implement Visible Focus States**
 
 ```css
 /* Add to styles.css */
@@ -218,7 +218,7 @@ body.dev-mode *:focus-visible {
 }
 ```
 
-- [ ] **Step 2: Verify Touch Targets**
+- [x] **Step 2: Verify Touch Targets**
 
 ```css
 .navbar a, .filter-btn, .ContactSubmitBtn {
@@ -230,10 +230,10 @@ body.dev-mode *:focus-visible {
 }
 ```
 
-- [ ] **Step 3: Run Visual Verification**
+- [x] **Step 3: Run Visual Verification**
 (Test tabbing through the site using keyboard to ensure focus outlines are visible, and check mobile view).
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 ```bash
 git add css/styles.css
 git commit -m "fix(a11y): add focus-visible outlines and ensure 44px touch targets"

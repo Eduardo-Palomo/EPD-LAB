@@ -1,6 +1,6 @@
 # Dark Cinematic Redesign Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Transform the 3D portfolio into a high-end "Dark Cinematic" experience with an immersive grid, glassmorphism navigation, and a dedicated Dev UI-UX section.
 
@@ -15,7 +15,7 @@
 **Files:**
 - Modify: `css/styles.css`
 
-- [ ] **Step 1: Update CSS variables and global styles**
+- [x] **Step 1: Update CSS variables and global styles**
 
 ```css
 :root {
@@ -43,10 +43,10 @@ h1, h2, .hero-h1 {
 }
 ```
 
-- [ ] **Step 2: Verify visual baseline**
+- [x] **Step 2: Verify visual baseline**
 Confirm that backgrounds are deeper black and fonts have updated correctly.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 `git commit -m "style: update theme variables and typography foundations"`
 
 ---
@@ -57,7 +57,7 @@ Confirm that backgrounds are deeper black and fonts have updated correctly.
 - Modify: `index.html`
 - Modify: `css/styles.css`
 
-- [ ] **Step 1: Refactor Navbar structure and style**
+- [x] **Step 1: Refactor Navbar structure and style**
 
 ```css
 .navbar {
@@ -89,10 +89,10 @@ Confirm that backgrounds are deeper black and fonts have updated correctly.
 }
 ```
 
-- [ ] **Step 2: Verify sticky behavior and blur effect**
+- [x] **Step 2: Verify sticky behavior and blur effect**
 Ensure the navbar stays centered and the backdrop-filter works correctly.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 `git commit -m "feat: implement floating glassmorphism navbar"`
 
 ---
@@ -102,7 +102,7 @@ Ensure the navbar stays centered and the backdrop-filter works correctly.
 **Files:**
 - Modify: `css/styles.css`
 
-- [ ] **Step 1: Refactor projects section to a grid**
+- [x] **Step 1: Refactor projects section to a grid**
 
 ```css
 .projects-section {
@@ -130,10 +130,10 @@ Ensure the navbar stays centered and the backdrop-filter works correctly.
 }
 ```
 
-- [ ] **Step 2: Verify grid responsiveness**
+- [x] **Step 2: Verify grid responsiveness**
 Check that cards wrap correctly on different screen sizes.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 `git commit -m "style: refactor project gallery to immersive grid layout"`
 
 ---
@@ -145,10 +145,10 @@ Check that cards wrap correctly on different screen sizes.
 - Modify: `css/styles.css`
 - Modify: `js/Script.js`
 
-- [ ] **Step 1: Update HTML for pop-out effect**
+- [x] **Step 1: Update HTML for pop-out effect**
 Wrap `img` in `.card-img-container`.
 
-- [ ] **Step 2: Add rim lighting and cross-fade effects in CSS**
+- [x] **Step 2: Add rim lighting and cross-fade effects in CSS**
 ```css
 .project-card::before {
     content: '';
@@ -165,10 +165,10 @@ Wrap `img` in `.card-img-container`.
 .project-card .hover-video { z-index: 10; height: 120%; }
 ```
 
-- [ ] **Step 3: Verify smooth transition to video**
+- [x] **Step 3: Verify smooth transition to video**
 Check that the image fades out as the video fades in on hover and pops out.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 `git commit -m "feat: add cinematic hover effects and rim lighting to project cards"`
 
 ---
@@ -178,7 +178,7 @@ Check that the image fades out as the video fades in on hover and pops out.
 **Files:**
 - Modify: `css/styles.css`
 
-- [ ] **Step 1: Modernize About and Skills sections**
+- [x] **Step 1: Modernize About and Skills sections**
 
 ```css
 .profile-circle {
@@ -198,10 +198,10 @@ Check that the image fades out as the video fades in on hover and pops out.
 }
 ```
 
-- [ ] **Step 2: Verify contrast and readability**
+- [x] **Step 2: Verify contrast and readability**
 Final check on the "About me" text and software grid icons.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 `git commit -m "style: polish about and skills sections for cinematic consistency"`
 
 ---
@@ -213,16 +213,16 @@ Final check on the "About me" text and software grid icons.
 - Modify: `css/styles.css`
 - Modify: `js/Script.js`
 
-- [ ] **Step 1: Add Filter Bar to index.html**
+- [x] **Step 1: Add Filter Bar to index.html**
 Insert before `.projects-container`.
 
-- [ ] **Step 2: Add CSS for Filter Bar**
+- [x] **Step 2: Add CSS for Filter Bar**
 Style buttons with glassmorphism and red accents.
 
-- [ ] **Step 3: Implement Filtering Logic in js/Script.js**
+- [x] **Step 3: Implement Filtering Logic in js/Script.js**
 Use `dataset.category` to filter cards.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 `git commit -m "feat: add category filters for 3D projects"`
 
 ---
@@ -234,16 +234,16 @@ Use `dataset.category` to filter cards.
 - Modify: `css/styles.css`
 - Modify: `js/Script.js`
 
-- [ ] **Step 1: Create Dev Portfolio Section**
+- [x] **Step 1: Create Dev Portfolio Section**
 Add a new section for Dev projects.
 
-- [ ] **Step 2: Design Bento Grid in CSS**
+- [x] **Step 2: Design Bento Grid in CSS**
 Responsive grid with asymmetric cards.
 
-- [ ] **Step 3: Implement Mode Toggle in JS**
+- [x] **Step 3: Implement Mode Toggle in JS**
 Update the floating button to switch between Art and Dev worlds.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 `git commit -m "feat: implement Dev Lab with Bento Grid for UI-UX"`
 
 ---
@@ -255,7 +255,7 @@ Update the floating button to switch between Art and Dev worlds.
 - Modify: `css/styles.css`
 - Modify: `js/Script.js`
 
-- [ ] **Step 1: Add Portal HTML to index.html**
+- [x] **Step 1: Add Portal HTML to index.html**
 Insert at the beginning of `<body>`:
 ```html
 <div id="entry-portal" class="portal-overlay">
@@ -276,7 +276,7 @@ Insert at the beginning of `<body>`:
 </div>
 ```
 
-- [ ] **Step 2: Add CSS for Split Portal**
+- [x] **Step 2: Add CSS for Split Portal**
 ```css
 .portal-overlay {
     position: fixed;
@@ -300,8 +300,8 @@ Insert at the beginning of `<body>`:
 .portal-overlay.fade-out { opacity: 0; pointer-events: none; transition: 0.8s ease; }
 ```
 
-- [ ] **Step 3: Implement Portal Logic in js/Script.js**
+- [x] **Step 3: Implement Portal Logic in js/Script.js**
 Add listeners to `.portal-side` to set the mode (`dev-mode` or `art-mode`) and trigger the `.fade-out` transition.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 `git commit -m "feat: implement futuristic split portal entry screen"`
