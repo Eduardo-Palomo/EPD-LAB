@@ -92,3 +92,11 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+
+// Collapsible Demo Reel Toggle
+function toggleReel() {
+    const container = document.querySelector('.floating-reel-container');
+    if (container) {
+        container.classList.toggle('collapsed');
+    }
+}
