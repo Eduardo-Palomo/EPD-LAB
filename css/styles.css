@@ -776,25 +776,6 @@ body.dev-mode .social-links a:hover {
     transform: translateX(0);
 }
 
-/* Mobile Adjustments for Toggle */
-@media (max-width: 768px) {
-    .floating-toggle-btn {
-        bottom: 25px;
-        right: 25px;
-        width: 55px;
-        height: 55px;
-    }
-    .floating-toggle-btn::after { display: none; }
-
-    .floating-toggle-btn-cv {
-        bottom: 95px;
-        right: 25px;
-        width: 55px;
-        height: 55px;
-    }
-    .floating-toggle-btn-cv::after { display: none; }
-}
-
 /* --- Floating Demo Reel Player --- */
 .floating-reel-container {
     position: fixed;
@@ -867,14 +848,31 @@ body.dev-mode .social-links a:hover {
     transform: rotate(180deg);
 }
 
+/* Mobile Adjustments for Floating Components */
 @media (max-width: 768px) {
+    .floating-toggle-btn {
+        bottom: 30px;
+        right: 30px;
+        width: 55px;
+        height: 55px;
+    }
+    .floating-toggle-btn::after { display: none; }
+
+    .floating-toggle-btn-cv {
+        bottom: 105px;
+        right: 30px;
+        width: 55px;
+        height: 55px;
+    }
+    .floating-toggle-btn-cv::after { display: none; }
+
     .floating-reel-container {
-        bottom: 25px;
-        left: 25px;
-        width: 200px;
+        bottom: 30px;
+        left: 30px;
+        width: 220px;
     }
     .floating-reel-container.collapsed {
-        transform: translateX(-237px);
+        transform: translateX(-262px);
     }
 }
 
