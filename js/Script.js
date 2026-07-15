@@ -1,3 +1,74 @@
+// Cinematic Preloader Logic (Real Progress)
+document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.getElementById("preloader");
+    if (!preloader) return;
+
+    const preloaderBar = document.getElementById("preloader-bar");
+    const preloaderPercentage = document.getElementById("preloader-percentage");
+
+    // Track all image tags and the main autoplaying video
+    const images = Array.from(document.querySelectorAll("img"));
+    const heroVideo = document.getElementById("hero-video");
+
+    let totalResources = images.length;
+    if (heroVideo) totalResources += 1;
+
+    let loadedResources = 0;
+
+    function updateProgress() {
+        loadedResources++;
+        const percentage = totalResources > 0 ? Math.round((loadedResources / totalResources) * 100) : 100;
+        
+        if (preloaderBar) preloaderBar.style.width = `${percentage}%`;
+        if (preloaderPercentage) preloaderPercentage.textContent = `${percentage}%`;
+
+        if (loadedResources >= totalResources) {
+            finishLoading();
+        }
+    }
+
+    function finishLoading() {
+        setTimeout(() => {
+            preloader.classList.add("loaded");
+        }, 300); // Smooth delay
+    }
+
+    // Safety fallback (timeout in 6 seconds max)
+    const safetyTimeout = setTimeout(() => {
+        if (!preloader.classList.contains("loaded")) {
+            if (preloaderBar) preloaderBar.style.width = "100%";
+            if (preloaderPercentage) preloaderPercentage.textContent = "100%";
+            finishLoading();
+        }
+    }, 6000);
+
+    if (totalResources === 0) {
+        finishLoading();
+        clearTimeout(safetyTimeout);
+        return;
+    }
+
+    // Track Images
+    images.forEach(img => {
+        if (img.complete) {
+            updateProgress();
+        } else {
+            img.addEventListener("load", updateProgress);
+            img.addEventListener("error", updateProgress); // Don't block if there's an error loading
+        }
+    });
+
+    // Track Hero Video
+    if (heroVideo) {
+        if (heroVideo.readyState >= 3) { // already loaded enough
+            updateProgress();
+        } else {
+            heroVideo.addEventListener("canplaythrough", updateProgress, { once: true });
+            heroVideo.addEventListener("error", updateProgress, { once: true });
+        }
+    }
+});
+
 window.addEventListener('scroll', () => {
     const video = document.getElementById('hero-video');
     const navbar = document.querySelector('.navbar');
@@ -41,25 +112,71 @@ if (filterButtons.length > 0) {
     });
 }
 
-// Hover Video Logic
-let currentlyPlaying = null;
-projectCards.forEach(card => {
-    const video = card.querySelector('.hover-video');
-    if (video) {
-        card.addEventListener('mouseenter', () => {
-            if (currentlyPlaying && currentlyPlaying !== video) {
-                currentlyPlaying.pause();
-                currentlyPlaying.currentTime = 0;
+// Hover/Scroll Video Logic
+const isMobileOrTouch = window.matchMedia('(max-width: 768px)').matches || window.matchMedia('(pointer: coarse)').matches;
+
+if (isMobileOrTouch) {
+    // Mobile/Touch behavior: Play video when card enters viewport
+    const videoObserverOptions = {
+        threshold: 0.5, // Play when 50% of the card is visible
+        rootMargin: "0px"
+    };
+
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const card = entry.target;
+            const video = card.querySelector('.hover-video');
+            if (!video) return;
+
+            if (entry.isIntersecting) {
+                // Clear any existing timeout to avoid multiple queues
+                if (card._videoTimeout) clearTimeout(card._videoTimeout);
+
+                // Set a 500ms delay to let the user view the card cover before autoplaying
+                card._videoTimeout = setTimeout(() => {
+                    card.classList.add('video-active');
+                    video.play().catch(() => {});
+                }, 500);
+            } else {
+                // If they scroll past before the 500ms, clear the timeout
+                if (card._videoTimeout) {
+                    clearTimeout(card._videoTimeout);
+                    card._videoTimeout = null;
+                }
+                card.classList.remove('video-active');
+                video.pause();
+                video.currentTime = 0;
             }
-            video.play().then(() => { currentlyPlaying = video; }).catch(() => {});
         });
-        card.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0;
-            if (currentlyPlaying === video) currentlyPlaying = null;
-        });
-    }
-});
+    }, videoObserverOptions);
+
+    projectCards.forEach(card => {
+        const video = card.querySelector('.hover-video');
+        if (video) {
+            videoObserver.observe(card);
+        }
+    });
+} else {
+    // Desktop behavior: Play video on hover
+    let currentlyPlaying = null;
+    projectCards.forEach(card => {
+        const video = card.querySelector('.hover-video');
+        if (video) {
+            card.addEventListener('mouseenter', () => {
+                if (currentlyPlaying && currentlyPlaying !== video) {
+                    currentlyPlaying.pause();
+                    currentlyPlaying.currentTime = 0;
+                }
+                video.play().then(() => { currentlyPlaying = video; }).catch(() => {});
+            });
+            card.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0;
+                if (currentlyPlaying === video) currentlyPlaying = null;
+            });
+        }
+    });
+}
 
 // Cinematic Reveal on Scroll
 const revealOptions = {

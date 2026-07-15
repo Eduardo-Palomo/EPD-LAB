@@ -1,0 +1,8 @@
+# Superpowers & Agent configurations
+.superpowers/
+.agents/
+.agent/
+.gemini/
+
+# Documentation & AI plans/specs
+docs/superpowers/
