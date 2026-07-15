@@ -1018,3 +1018,66 @@ body.dev-mode .social-links a:hover {
     50% { opacity: 1; }
 }
 
+/* --- Language Switcher --- */
+.lang-switcher {
+    position: fixed;
+    top: 30px;
+    left: var(--side-padding);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 6000;
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    transition: all 0.5s ease;
+}
+
+.lang-switcher.scrolled {
+    top: 15px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-weight: 400;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    padding: 2px 4px;
+    text-transform: uppercase;
+}
+
+.lang-btn.active {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-shadow: 0 0 10px var(--accent-red-bright);
+}
+
+body.dev-mode .lang-btn.active {
+    text-shadow: 0 0 10px var(--accent-dev);
+}
+
+.lang-divider {
+    color: rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .lang-switcher {
+        top: 20px;
+        left: 20px;
+        padding: 4px 10px;
+        font-size: 0.65rem;
+    }
+    .lang-switcher.scrolled {
+        top: 12px;
+    }
+}
+

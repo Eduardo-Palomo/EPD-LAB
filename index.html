@@ -10,19 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body class="portal-body">
+    <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+
     <div id="entry-portal" class="portal-overlay">
         <a href="art-portfolio.html" class="portal-link art-side">
             <div class="portal-content">
-                <h2 class="portal-h2">3D ART STATION</h2>
-                <p class="portal-p">Digital Sculpting & Cinematic Design</p>
-                <div class="portal-btn">Enter</div>
+                <h2 class="portal-h2" data-translate="portal-art-title">3D ART STATION</h2>
+                <p class="portal-p" data-translate="portal-art-desc">Digital Sculpting & Cinematic Design</p>
+                <div class="portal-btn" data-translate="portal-enter">Enter</div>
             </div>
         </a>
         <a href="dev-portfolio.html" class="portal-link dev-side">
             <div class="portal-content">
-                <h2 class="portal-h2">DEV UI-UX LAB</h2>
-                <p class="portal-p">Engineering Next-Gen Interfaces</p>
-                <div class="portal-btn">Enter</div>
+                <h2 class="portal-h2" data-translate="portal-dev-title">DEV UI-UX LAB</h2>
+                <p class="portal-p" data-translate="portal-dev-desc">Engineering Next-Gen Interfaces</p>
+                <div class="portal-btn" data-translate="portal-enter">Enter</div>
             </div>
         </a>
     </div>
@@ -33,5 +39,6 @@
         </div>
         <p>&copy; 2026 Eduardo Palomo Delgado. Creative Portal.</p>
     </footer>
+    <script src="js/Script.js?v=1.1"></script>
 </body>
 </html>

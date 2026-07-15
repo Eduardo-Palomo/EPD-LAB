@@ -20,13 +20,19 @@
         </div>
     </div>
 
+    <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Toolkit</a></li>
-            <li><a href="#dev-lab">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="index.html" data-translate="nav-home">Home</a></li>
+            <li><a href="#about" data-translate="nav-about">About</a></li>
+            <li><a href="#skills" data-translate="nav-toolkit">Toolkit</a></li>
+            <li><a href="#dev-lab" data-translate="nav-projects">Projects</a></li>
+            <li><a href="#Contact" data-translate="nav-contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -35,20 +41,20 @@
             <source src="Media/Videos/Sequence.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
-            <h1 class="hero-h1">HELLO, I AM <br> EDUARDO</h1>
-            <h2 class="hero-subtitle">DEV UI-UX LAB</h2>
-            <p class="hero-p">Engineering high-performance digital systems with architectural precision and technical excellence.</p>
+            <h1 class="hero-h1" data-translate="dev-hero-title">HELLO, I AM <br> EDUARDO</h1>
+            <h2 class="hero-subtitle" data-translate="dev-hero-subtitle">DEV UI-UX LAB</h2>
+            <p class="hero-p" data-translate="dev-hero-desc">Engineering high-performance digital systems with architectural precision and technical excellence.</p>
         </div>
     </section>
 
     <section id="dev-lab" class="dev-section">
-        <h2 class="section-title">Infrastructure / UI-UX</h2>
+        <h2 class="section-title" data-translate="dev-section-projects">Infrastructure / UI-UX</h2>
         <div class="bento-grid">
             <div class="bento-item large">
                 <video class="bento-video" src="Media/Videos/PortfolioDev_1.mp4" muted loop playsinline autoplay></video>
-                <div class="featured-badge">Featured System</div>
-                <h3>Game Studio Architecture</h3>
-                <p>High-fidelity portfolio orchestration</p>
+                <div class="featured-badge" data-translate="dev-bento-badge-featured">Featured System</div>
+                <h3 data-translate="dev-bento-1-title">Game Studio Architecture</h3>
+                <p data-translate="dev-bento-1-desc">High-fidelity portfolio orchestration</p>
                 <div class="bento-tags">
                     <span>React + Vite</span>
                     <span>Systems Design</span>
@@ -57,8 +63,8 @@
             </div>
             <div class="bento-item wide">
                 <video class="bento-video" src="Media/Videos/DevVRUnrealEngineBluePrints.mp4" muted loop playsinline autoplay></video>
-                <h3>XR Logic Systems</h3>
-                <p>Blueprint logic & shader engineering</p>
+                <h3 data-translate="dev-bento-2-title">XR Logic Systems</h3>
+                <p data-translate="dev-bento-2-desc">Blueprint logic & shader engineering</p>
                 <div class="bento-tags">
                     <span>Unreal Engine</span>
                     <span>Technical Art</span>
@@ -67,9 +73,9 @@
             </div>
             <div class="bento-item tall">
                 <video class="bento-video" src="Media/Videos/DevMobile.mp4" muted loop playsinline autoplay></video>
-                <div class="featured-badge">Mobile Interface</div>
-                <h3>Financial Interface Design</h3>
-                <p>Cross-platform mobile optimization</p>
+                <div class="featured-badge" data-translate="dev-bento-badge-mobile">Mobile Interface</div>
+                <h3 data-translate="dev-bento-3-title">Financial Interface Design</h3>
+                <p data-translate="dev-bento-3-desc">Cross-platform mobile optimization</p>
                 <div class="bento-tags">
                     <span>Flutter</span>
                     <span>Dart Logic</span>
@@ -82,21 +88,21 @@
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-text">
-                <h2 class="section-title">The developer</h2> 
-                <p>I bridge the gap between technical art and software engineering. My focus is on creating clean, scalable architectures that support high-impact visual experiences.</p>
-                <p>With a foundation in character art and technical pipelines, I approach development with a unique spatial and structural perspective.</p>
+                <h2 class="section-title" data-translate="dev-section-about">The developer</h2> 
+                <p data-translate="dev-about-p1">I bridge the gap between technical art and software engineering. My focus is on creating clean, scalable architectures that support high-impact visual experiences.</p>
+                <p data-translate="dev-about-p2">With a foundation in character art and technical pipelines, I approach development with a unique spatial and structural perspective.</p>
                 
                 <div class="education-container">
-                    <h3 class="education-title">Education</h3>
+                    <h3 class="education-title" data-translate="dev-edu-title">Education</h3>
                     <div class="edu-timeline">
                         <div class="edu-item">
-                            <span class="edu-status">Completed</span>
-                            <h4 class="edu-degree">Bachelor - Degree in Design and Art for Video Games</h4>
+                            <span class="edu-status" data-translate="dev-edu-status-completed">Completed</span>
+                            <h4 class="edu-degree" data-translate="dev-edu-degree1">Bachelor - Degree in Design and Art for Video Games</h4>
                             <div class="edu-university">UNIAT</div>
                         </div>
                         <div class="edu-item">
-                            <span class="edu-status in-progress">In Progress</span>
-                            <h4 class="edu-degree">Bachelor - Degree in Artificial Intelligence Engineering</h4>
+                            <span class="edu-status in-progress" data-translate="dev-edu-status-inprogress">In Progress</span>
+                            <h4 class="edu-degree" data-translate="dev-edu-degree2">Bachelor - Degree in Artificial Intelligence Engineering</h4>
                             <div class="edu-university">Hybridge</div>
                         </div>
                     </div>
@@ -109,7 +115,7 @@
     </section>
 
     <section id="skills" class="SkillsSection">
-        <h2 class="section-title">Technical Stack</h2>
+        <h2 class="section-title" data-translate="dev-section-toolkit">Technical Stack</h2>
         <div class="software-grid">
             <div class="software-item" title="React"><img src="Media/icons/DevIcons/React.png" alt="React"><span>React</span></div>
             <div class="software-item" title="Flutter"><img src="Media/icons/DevIcons/Flutter.png" alt="Flutter"><span>Flutter</span></div>
@@ -132,31 +138,31 @@
     </section>
 
     <Section id="Contact" class="ContactSection">
-        <h2 class="section-title">Initialize Project</h2>
+        <h2 class="section-title" data-translate="dev-section-contact">Initialize Project</h2>
         <form class="ContactForm" action="https://formsubmit.co/pd.eduardo@outlook.es" method="POST">
             <input type="text" name="_honey" style="display:none">
             <input type="hidden" name="_captcha" value="false">
             <div class="form-group">
-                <label class="ContactLabel">Resource Name</label>
-                <input class="ContactInput" type="text" name="Name" placeholder="Identificación..." required>
+                <label class="ContactLabel" data-translate="dev-contact-label-name">Resource Name</label>
+                <input class="ContactInput" type="text" name="Name" placeholder="Identificación..." data-translate="dev-contact-placeholder-name" required>
             </div>
             <div class="form-group">
-                <label class="ContactLabel">Callback Email</label>
+                <label class="ContactLabel" data-translate="dev-contact-label-email">Callback Email</label>
                 <input class="ContactInput" type="email" name="Email" placeholder="network@access.com" required>
             </div>
             <div class="form-group">
-                <label class="ContactLabel">System Requirements</label>
-                <textarea class="ContactTextArea" name="Message" rows="4" placeholder="Brief technical requirements summary..." required></textarea>
+                <label class="ContactLabel" data-translate="dev-contact-label-requirements">System Requirements</label>
+                <textarea class="ContactTextArea" name="Message" rows="4" placeholder="Brief technical requirements summary..." data-translate="dev-contact-placeholder-requirements" required></textarea>
             </div>
-            <button type="submit" class="ContactSubmitBtn">INITIALIZE PROJECT</button>
+            <button type="submit" class="ContactSubmitBtn" data-translate="dev-contact-submit">INITIALIZE PROJECT</button>
         </form>
     </Section>
 
-    <a href="art-portfolio.html" class="floating-toggle-btn" title="Switch to Art Station">
+    <a href="art-portfolio.html" class="floating-toggle-btn" title="Switch to Art Station" data-translate="floating-toggle-btn-art">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-24.5 68.3-58.4 81.2C415 354.4 392 394 392 440c0 39.8-32.2 72-72 72c-5.8 0-11.5-.7-17-2c-2.3-.5-4.6-1.1-6.9-1.8c-10.7-3.1-22.3-1.6-32 3.9l-6.2 3.5c-20 11.4-44.1 16.4-67.4 11.6c-48.5-10-85.4-49.8-93.5-98.1c-1.2-7-1.9-14.1-1.9-21.2c0-12 1.4-23.7 4.1-35c.8-3.4 1.3-7 1.3-10.5c0-14.7-10-27.7-24.3-31.4C30 361.6 0 312.4 0 256C0 114.6 114.6 0 256 0S512 114.6 512 256zM136 216a40 40 0 1 0 0-80 40 40 0 1 0 0 80zm48 120a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zM312 176a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM376 296a40 40 0 1 0 -80 0 40 40 0 1 0 80 0z"/></svg>
     </a>
 
-    <a href="Media/CV-Dev.pdf" class="floating-toggle-btn-cv" target="_blank" rel="noopener noreferrer" title="View Dev CV">
+    <a href="Media/CV-Dev.pdf" class="floating-toggle-btn-cv" target="_blank" rel="noopener noreferrer" title="View Dev CV" data-translate="floating-toggle-btn-cv-dev">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
     </a>
 

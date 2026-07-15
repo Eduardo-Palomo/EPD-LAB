@@ -20,13 +20,19 @@
         </div>
     </div>
 
+    <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="index.html" data-translate="nav-home">Home</a></li>
+            <li><a href="#about" data-translate="nav-about">About</a></li>
+            <li><a href="#skills" data-translate="art-nav-skills">Skills</a></li>
+            <li><a href="#projects" data-translate="nav-projects">Projects</a></li>
+            <li><a href="#Contact" data-translate="nav-contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -35,17 +41,17 @@
             <source src="Media/Videos/Sequence.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
-            <h1 class="hero-h1">HELLO, I AM <br> EDUARDO</h1>
-            <h2 class="hero-subtitle">3D ART STATION</h2>
-            <p class="hero-p">Crafting immersive characters, environments, and visual stories for games and cinematic experiences.</p>
+            <h1 class="hero-h1" data-translate="dev-hero-title">HELLO, I AM <br> EDUARDO</h1>
+            <h2 class="hero-subtitle" data-translate="art-hero-subtitle">3D ART STATION</h2>
+            <p class="hero-p" data-translate="art-hero-desc">Crafting immersive characters, environments, and visual stories for games and cinematic experiences.</p>
         </div>
     </section>
 
     <section id="projects" class="projects-section">
         <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="modeling">Modeling & Characters</button>
-            <button class="filter-btn" data-filter="vfx">VFX</button>
+            <button class="filter-btn active" data-filter="all" data-translate="art-filter-all">All</button>
+            <button class="filter-btn" data-filter="modeling" data-translate="art-filter-modeling">Modeling & Characters</button>
+            <button class="filter-btn" data-filter="vfx" data-translate="art-filter-vfx">VFX</button>
         </div>
         <div class="projects-container">
             <div class="project-card" data-category="modeling">
@@ -107,20 +113,20 @@
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-text">
-                <h2 class="about-h2">About the Artist</h2> 
-                <p>I’m Eduardo, a passionate and self-taught 3D artist with over 8 years of experience. I specialize in the full pipeline of character and environment creation, from high-poly sculpting to engine integration. My goal is to bring digital worlds to life with a focus on visual impact and technical efficiency.</p>
+                <h2 class="about-h2" data-translate="art-section-about">About the Artist</h2> 
+                <p data-translate="art-about-p1">I’m Eduardo, a passionate and self-taught 3D artist with over 8 years of experience. I specialize in the full pipeline of character and environment creation, from high-poly sculpting to engine integration. My goal is to bring digital worlds to life with a focus on visual impact and technical efficiency.</p>
                 
                 <div class="education-container">
-                    <h3 class="education-title">Education</h3>
+                    <h3 class="education-title" data-translate="dev-edu-title">Education</h3>
                     <div class="edu-timeline">
                         <div class="edu-item">
-                            <span class="edu-status">Completed</span>
-                            <h4 class="edu-degree">Bachelor - Degree in Design and Art for Video Games</h4>
+                            <span class="edu-status" data-translate="dev-edu-status-completed">Completed</span>
+                            <h4 class="edu-degree" data-translate="dev-edu-degree1">Bachelor - Degree in Design and Art for Video Games</h4>
                             <div class="edu-university">UNIAT</div>
                         </div>
                         <div class="edu-item">
-                            <span class="edu-status in-progress">In Progress</span>
-                            <h4 class="edu-degree">Bachelor - Degree in Artificial Intelligence Engineering</h4>
+                            <span class="edu-status in-progress" data-translate="dev-edu-status-inprogress">In Progress</span>
+                            <h4 class="edu-degree" data-translate="dev-edu-degree2">Bachelor - Degree in Artificial Intelligence Engineering</h4>
                             <div class="edu-university">Hybridge</div>
                         </div>
                     </div>
@@ -134,10 +140,10 @@
 
     <section id="skills" class="SkillsSection">
         <div class="skills-software-container">
-            <h2 class="section-title">Creative Toolkit</h2>
+            <h2 class="section-title" data-translate="art-section-skills">Creative Toolkit</h2>
             <div class="software-showcase">
                 <div class="art-stack-wrapper" style="display: block;">
-                    <h3 class="subsection-title">3D Art Stack</h3>
+                    <h3 class="subsection-title" data-translate="art-skills-3d">3D Art Stack</h3>
                     <div class="software-grid">
                         <div class="software-item" title="Blender"><img src="Media/icons/3Dicons/Blender_logo_no_text.svg.png" alt="Blender"><span>Blender</span></div>
                         <div class="software-item" title="Substance 3D"><img src="Media/icons/3Dicons/adobe-substance-3d-painter-icon.webp" alt="Substance 3D"><span>Substance 3D</span></div>
@@ -152,7 +158,7 @@
                 </div>
             </div>
             <div class="skills-showcase">
-                <h3 class="subsection-title">Core Art Skills</h3>
+                <h3 class="subsection-title" data-translate="art-skills-core">Core Art Skills</h3>
                 <ul class="skills-list art-core-skills" style="display: flex;">
                     <li>3D Modeling & Sculpting</li>
                     <li>PBR & Stylized Texturing</li>
@@ -167,36 +173,36 @@
     </section>
 
     <Section id="Contact" class="ContactSection">
-        <h2 class="section-title">Get in Touch</h2>
+        <h2 class="section-title" data-translate="art-section-contact">Get in Touch</h2>
         <form class="ContactForm" action="https://formsubmit.co/pd.eduardo@outlook.es" method="POST">
             <input type="text" name="_honey" style="display:none">
             <input type="hidden" name="_captcha" value="false">
             <div class="form-group">
-                <label class="ContactLabel">Name</label>
-                <input class="ContactInput" type="text" name="Name" placeholder="Your name" required>
+                <label class="ContactLabel" data-translate="art-contact-label-name">Name</label>
+                <input class="ContactInput" type="text" name="Name" placeholder="Your name" data-translate="art-contact-placeholder-name" required>
             </div>
             <div class="form-group">
-                <label class="ContactLabel">Email</label>
-                <input class="ContactInput" type="email" name="Email" placeholder="your@email.com" required>
+                <label class="ContactLabel" data-translate="art-contact-label-email">Email</label>
+                <input class="ContactInput" type="email" name="Email" placeholder="your@email.com" data-translate="art-contact-placeholder-email" required>
             </div>
             <div class="form-group">
-                <label class="ContactLabel">Message</label>
-                <textarea class="ContactTextArea" name="Message" rows="4" placeholder="Tell me about your project..." required></textarea>
+                <label class="ContactLabel" data-translate="dev-contact-label-requirements">Message</label>
+                <textarea class="ContactTextArea" name="Message" rows="4" placeholder="Tell me about your project..." data-translate="art-contact-placeholder-message" required></textarea>
             </div>
-            <button type="submit" class="ContactSubmitBtn">INITIALIZE PROJECT</button>
+            <button type="submit" class="ContactSubmitBtn" data-translate="dev-contact-submit">INITIALIZE PROJECT</button>
         </form>
     </Section>
 
-    <a href="dev-portfolio.html" class="floating-toggle-btn" title="Switch to Dev Portfolio">
+    <a href="dev-portfolio.html" class="floating-toggle-btn" title="Switch to Dev Portfolio" data-translate="floating-toggle-btn-dev">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 150.6 182.6c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
     </a>
 
-    <a href="Media/CV-3D.pdf" class="floating-toggle-btn-cv" target="_blank" rel="noopener noreferrer" title="View 3D CV">
+    <a href="Media/CV-3D.pdf" class="floating-toggle-btn-cv" target="_blank" rel="noopener noreferrer" title="View 3D CV" data-translate="floating-toggle-btn-cv-art">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
     </a>
 
     <div class="floating-reel-container">
-        <button class="toggle-reel-btn" onclick="toggleReel()" title="Esconder / Mostrar Demo Reel">
+        <button class="toggle-reel-btn" onclick="toggleReel()" title="Esconder / Mostrar Demo Reel" data-translate="floating-reel-toggle-tooltip">
             <svg id="toggle-reel-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="width: 12px; height: 12px; fill: white; transition: transform 0.3s;"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
         </button>
         <div class="reel-iframe-wrapper">
