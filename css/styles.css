@@ -1071,13 +1071,20 @@ body.dev-mode .lang-btn.active {
 
 @media (max-width: 768px) {
     .lang-switcher {
-        top: 20px;
-        left: 20px;
-        padding: 4px 10px;
+        /* No longer fixed — sits naturally in the DOM below the navbar */
+        position: fixed;
+        top: auto;
+        left: 50%;
+        bottom: auto;
+        transform: translateX(-50%);
+        /* Calculate top: navbar height (~64px) + a small gap */
+        top: 64px;
+        padding: 4px 14px;
         font-size: 0.65rem;
+        background: rgba(5, 5, 5, 0.75);
     }
     .lang-switcher.scrolled {
-        top: 12px;
+        top: 44px;
     }
 }
 
