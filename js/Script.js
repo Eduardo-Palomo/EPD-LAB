@@ -296,9 +296,9 @@ const translations = {
     },
     es: {
         // portal
-        "portal-art-title": "ESTACIÓN DE ARTE 3D",
-        "portal-art-desc": "Escultura Digital y Diseño Cinemático",
-        "portal-dev-title": "LABORATORIO DEV UI-UX",
+        "portal-art-title": "ARTE 3D",
+        "portal-art-desc": "Modelado 3D & Diseño Cinemático para Videojuegos",
+        "portal-dev-title": "LAB DEV UI-UX",
         "portal-dev-desc": "Ingeniería de Interfaces de Nueva Generación",
         "portal-enter": "Entrar",
 
@@ -312,7 +312,7 @@ const translations = {
 
         // dev-portfolio
         "dev-hero-title": "HOLA, SOY <br> EDUARDO",
-        "dev-hero-subtitle": "LABORATORIO DEV UI-UX",
+        "dev-hero-subtitle": "LAB DEV UI-UX",
         "dev-hero-desc": "Ingeniería de sistemas digitales de alto rendimiento con precisión arquitectónica y excelencia técnica.",
         "dev-section-projects": "Infraestructura / UI-UX",
         "dev-bento-badge-featured": "Sistema Destacado",
@@ -343,8 +343,8 @@ const translations = {
         "floating-toggle-btn-cv-dev": "Ver CV Dev",
 
         // art-portfolio
-        "art-hero-subtitle": "ESTACIÓN DE ARTE 3D",
-        "art-hero-desc": "Creación de personajes inmersivos, entornos e historias visuales para videojuegos y experiencias cinematográficas.",
+        "art-hero-subtitle": "ARTE 3D",
+        "art-hero-desc": "Modelado 3D de personajes y entornos para videojuegos — del sculpting en alta resolución a la integración en motor.",
         "art-filter-all": "Todo",
         "art-filter-modeling": "Modelado y Personajes",
         "art-filter-vfx": "VFX",
