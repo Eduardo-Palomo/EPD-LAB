@@ -610,8 +610,16 @@ body.dev-mode .ContactSubmitBtn:hover {
         -webkit-backdrop-filter: blur(20px);
         border-bottom: 1px solid var(--glass-border);
     }
-    .navbar ul { gap: 1.5rem; }
-    .navbar a { font-size: 0.65rem; letter-spacing: 0.15em; }
+    .navbar ul { 
+        gap: 0.8rem 1.2rem; /* row-gap column-gap */
+        flex-wrap: wrap;    /* allow 2 rows if needed */
+        justify-content: center;
+        padding: 0 1rem;
+    }
+    .navbar a { 
+        font-size: clamp(0.55rem, 1.8vw, 0.65rem); 
+        letter-spacing: 0.08em; 
+    }
 
     /* Layout & Content Mobile Adjustments */
     .hero-section { text-align: center; justify-content: center; }
