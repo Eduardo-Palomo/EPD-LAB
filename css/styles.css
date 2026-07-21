@@ -1122,32 +1122,89 @@ body.dev-mode .lang-btn.active {
 
 .lightbox-content {
     position: relative;
-    max-width: 90vw;
-    max-height: 85vh;
+    max-width: 92vw;
+    max-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     transform: scale(0.92);
     transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+    width: 100%;
 }
 
 .lightbox-modal.active .lightbox-content {
     transform: scale(1);
 }
 
-.lightbox-content img,
-.lightbox-content video {
-    max-width: 100%;
-    max-height: 75vh;
-    border-radius: var(--card-radius);
-    object-fit: contain;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 40px rgba(255, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.lightbox-media-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1300px;
 }
 
-body.dev-mode .lightbox-content img,
-body.dev-mode .lightbox-content video {
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 229, 255, 0.25);
+.lightbox-media-grid.has-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.lightbox-media-box {
+    position: relative;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 75vh;
+}
+
+body.dev-mode .lightbox-media-box {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 229, 255, 0.2);
+}
+
+.lightbox-media-box img,
+.lightbox-media-box video {
+    width: 100%;
+    height: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    display: block;
+}
+
+.lightbox-media-label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.75rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.12em;
+    color: var(--accent-red);
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+body.dev-mode .lightbox-media-label {
+    color: var(--accent-dev);
+}
+
+@media (max-width: 900px) {
+    .lightbox-media-grid.has-split {
+        grid-template-columns: 1fr;
+        max-height: 75vh;
+        overflow-y: auto;
+    }
 }
 
 .lightbox-caption {
@@ -1158,6 +1215,7 @@ body.dev-mode .lightbox-content video {
     margin-top: 1.2rem;
     text-transform: uppercase;
     text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    text-align: center;
 }
 
 .lightbox-close {
@@ -1193,5 +1251,6 @@ body.dev-mode .lightbox-close:hover {
     color: #000;
     box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
 }
+
 
 

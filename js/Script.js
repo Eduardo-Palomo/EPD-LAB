@@ -433,34 +433,63 @@ function initLightbox() {
         lightbox.innerHTML = `
             <button class="lightbox-close" aria-label="Cerrar">&times;</button>
             <div class="lightbox-content">
-                <img id="lightbox-img" src="" alt="" style="display:none;">
-                <video id="lightbox-video" src="" controls autoplay loop style="display:none;"></video>
+                <div id="lightbox-media-grid" class="lightbox-media-grid">
+                    <div id="lightbox-img-wrapper" class="lightbox-media-box">
+                        <span class="lightbox-media-label">Render / Cover</span>
+                        <img id="lightbox-img" src="" alt="">
+                    </div>
+                    <div id="lightbox-video-wrapper" class="lightbox-media-box">
+                        <span class="lightbox-media-label">360° Turntable / Video</span>
+                        <video id="lightbox-video" src="" controls autoplay loop></video>
+                    </div>
+                </div>
                 <div id="lightbox-caption" class="lightbox-caption"></div>
             </div>
         `;
         document.body.appendChild(lightbox);
     }
 
+    const grid = lightbox.querySelector("#lightbox-media-grid");
+    const imgWrapper = lightbox.querySelector("#lightbox-img-wrapper");
+    const videoWrapper = lightbox.querySelector("#lightbox-video-wrapper");
     const lightboxImg = lightbox.querySelector("#lightbox-img");
     const lightboxVideo = lightbox.querySelector("#lightbox-video");
     const lightboxCaption = lightbox.querySelector("#lightbox-caption");
     const closeBtn = lightbox.querySelector(".lightbox-close");
 
-    function openLightbox(src, isVideo, captionText) {
-        if (isVideo) {
-            lightboxImg.style.display = "none";
-            lightboxImg.src = "";
-            lightboxVideo.src = src;
-            lightboxVideo.style.display = "block";
+    function openLightbox(imgSrc, videoSrc, captionText) {
+        const hasImg = Boolean(imgSrc);
+        const hasVideo = Boolean(videoSrc);
+
+        if (hasImg && hasVideo) {
+            grid.className = "lightbox-media-grid has-split";
+            imgWrapper.style.display = "flex";
+            videoWrapper.style.display = "flex";
+
+            lightboxImg.src = imgSrc;
+            lightboxImg.alt = captionText || "";
+
+            lightboxVideo.src = videoSrc;
             lightboxVideo.play().catch(() => {});
-        } else {
-            lightboxVideo.style.display = "none";
+        } else if (hasVideo) {
+            grid.className = "lightbox-media-grid single-media";
+            imgWrapper.style.display = "none";
+            videoWrapper.style.display = "flex";
+            lightboxImg.src = "";
+
+            lightboxVideo.src = videoSrc;
+            lightboxVideo.play().catch(() => {});
+        } else if (hasImg) {
+            grid.className = "lightbox-media-grid single-media";
+            videoWrapper.style.display = "none";
             lightboxVideo.pause();
             lightboxVideo.src = "";
-            lightboxImg.src = src;
+
+            imgWrapper.style.display = "flex";
+            lightboxImg.src = imgSrc;
             lightboxImg.alt = captionText || "";
-            lightboxImg.style.display = "block";
         }
+
         lightboxCaption.textContent = captionText || "";
         lightbox.classList.add("active");
         lightbox.setAttribute("aria-hidden", "false");
@@ -503,13 +532,13 @@ function initLightbox() {
             const heading = card.querySelector("h3, h4") || img;
             const captionText = img?.alt || heading?.textContent || "";
 
-            if (video && video.getAttribute("src")) {
-                openLightbox(video.getAttribute("src"), true, captionText);
-            } else if (img && img.getAttribute("src")) {
-                openLightbox(img.getAttribute("src"), false, captionText);
-            }
+            const imgSrc = img?.getAttribute("src") || null;
+            const videoSrc = video?.getAttribute("src") || null;
+
+            openLightbox(imgSrc, videoSrc, captionText);
         });
     });
 }
+
 
 
