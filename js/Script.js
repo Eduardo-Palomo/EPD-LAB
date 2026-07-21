@@ -416,5 +416,100 @@ document.addEventListener("DOMContentLoaded", () => {
             setLanguage(selectedLang);
         });
     });
+
+    // Initialize Lightbox Modal
+    initLightbox();
 });
+
+// --- Cinematic Lightbox Modal Implementation ---
+function initLightbox() {
+    let lightbox = document.getElementById("lightbox-modal");
+    if (!lightbox) {
+        lightbox = document.createElement("div");
+        lightbox.id = "lightbox-modal";
+        lightbox.className = "lightbox-modal";
+        lightbox.setAttribute("aria-hidden", "true");
+        lightbox.setAttribute("role", "dialog");
+        lightbox.innerHTML = `
+            <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="" style="display:none;">
+                <video id="lightbox-video" src="" controls autoplay loop style="display:none;"></video>
+                <div id="lightbox-caption" class="lightbox-caption"></div>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+    }
+
+    const lightboxImg = lightbox.querySelector("#lightbox-img");
+    const lightboxVideo = lightbox.querySelector("#lightbox-video");
+    const lightboxCaption = lightbox.querySelector("#lightbox-caption");
+    const closeBtn = lightbox.querySelector(".lightbox-close");
+
+    function openLightbox(src, isVideo, captionText) {
+        if (isVideo) {
+            lightboxImg.style.display = "none";
+            lightboxImg.src = "";
+            lightboxVideo.src = src;
+            lightboxVideo.style.display = "block";
+            lightboxVideo.play().catch(() => {});
+        } else {
+            lightboxVideo.style.display = "none";
+            lightboxVideo.pause();
+            lightboxVideo.src = "";
+            lightboxImg.src = src;
+            lightboxImg.alt = captionText || "";
+            lightboxImg.style.display = "block";
+        }
+        lightboxCaption.textContent = captionText || "";
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        setTimeout(() => {
+            if (!lightbox.classList.contains("active")) {
+                lightboxVideo.pause();
+                lightboxVideo.src = "";
+                lightboxImg.src = "";
+            }
+        }, 400);
+    }
+
+    closeBtn.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightbox.classList.contains("active")) {
+            closeLightbox();
+        }
+    });
+
+    // Attach click triggers to project cards and bento items
+    const cards = document.querySelectorAll(".project-card, .bento-item");
+    cards.forEach(card => {
+        card.style.cursor = "pointer";
+        card.addEventListener("click", (e) => {
+            if (e.target.closest("a, button")) return;
+
+            const img = card.querySelector("img");
+            const video = card.querySelector(".hover-video, .bento-video, video");
+            const heading = card.querySelector("h3, h4") || img;
+            const captionText = img?.alt || heading?.textContent || "";
+
+            if (video && video.getAttribute("src")) {
+                openLightbox(video.getAttribute("src"), true, captionText);
+            } else if (img && img.getAttribute("src")) {
+                openLightbox(img.getAttribute("src"), false, captionText);
+            }
+        });
+    });
+}
+
 
