@@ -349,7 +349,7 @@ const translations = {
         "art-filter-modeling": "Modelado y Personajes",
         "art-filter-vfx": "VFX",
         "art-section-about": "Sobre el Artista",
-        "art-about-p1": "Soy Eduardo, un artista 3D apasionado y autodidacta con más de 8 años de experiencia. Me especializo en todo el pipeline de creación de personajes y entornos, desde el esculpido en alta resolución hasta la integración en motores de juego. Mi meta es dar vida a mundos digitales con un fuerte enfoque en el impacto visual y la eficiencia técnica.",
+        "art-about-p1": "Soy Eduardo, un artista 3D apasionado y autodidacta con más de 8 años de experiencia. Me especializo en todo el pipeline de creación de personajes y entornos, desde el esculpido en alta resolución hasta la integración en motores de videojuegos. Mi meta es dar vida a mundos digitales con un fuerte enfoque en el impacto visual y la eficiencia técnica.",
         "art-section-skills": "Toolkit Creativo",
         "art-skills-3d": "Stack de Arte 3D",
         "art-skills-core": "Habilidades Clave de Arte",
