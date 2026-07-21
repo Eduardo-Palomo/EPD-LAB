@@ -452,12 +452,17 @@ function initLightbox() {
     const grid = lightbox.querySelector("#lightbox-media-grid");
     const imgWrapper = lightbox.querySelector("#lightbox-img-wrapper");
     const videoWrapper = lightbox.querySelector("#lightbox-video-wrapper");
+    const videoLabel = videoWrapper ? videoWrapper.querySelector(".lightbox-media-label") : null;
     const lightboxImg = lightbox.querySelector("#lightbox-img");
     const lightboxVideo = lightbox.querySelector("#lightbox-video");
     const lightboxCaption = lightbox.querySelector("#lightbox-caption");
     const closeBtn = lightbox.querySelector(".lightbox-close");
 
-    function openLightbox(imgSrc, videoSrc, captionText) {
+    function openLightbox(imgSrc, videoSrc, captionText, isVfx = false) {
+        if (videoLabel) {
+            videoLabel.textContent = isVfx ? "VFX / Animation" : "360° Turntable / Video";
+        }
+
         const hasImg = Boolean(imgSrc);
         const hasVideo = Boolean(videoSrc);
 
@@ -534,8 +539,10 @@ function initLightbox() {
 
             const imgSrc = img?.getAttribute("src") || null;
             const videoSrc = video?.getAttribute("src") || null;
+            const category = card.dataset.category || "";
+            const isVfx = category === "vfx" || (videoSrc && videoSrc.toLowerCase().includes("vfx"));
 
-            openLightbox(imgSrc, videoSrc, captionText);
+            openLightbox(imgSrc, videoSrc, captionText, isVfx);
         });
     });
 }
