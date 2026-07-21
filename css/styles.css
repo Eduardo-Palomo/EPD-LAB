@@ -1199,11 +1199,92 @@ body.dev-mode .lightbox-media-label {
     color: var(--accent-dev);
 }
 
+/* --- High-End Responsive Lightbox Enhancements --- */
 @media (max-width: 900px) {
+    .lightbox-modal {
+        padding: 1rem;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .lightbox-content {
+        max-width: 96vw;
+        max-height: 92vh;
+    }
+
+    .lightbox-media-grid {
+        max-height: 80vh;
+        overflow-y: auto;
+        padding-right: 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-red) rgba(0, 0, 0, 0.5);
+    }
+
+    body.dev-mode .lightbox-media-grid {
+        scrollbar-color: var(--accent-dev) rgba(0, 0, 0, 0.5);
+    }
+
     .lightbox-media-grid.has-split {
         grid-template-columns: 1fr;
-        max-height: 75vh;
-        overflow-y: auto;
+        gap: 1.2rem;
+    }
+
+    .lightbox-media-box {
+        max-height: 48vh;
+        width: 100%;
+    }
+
+    .lightbox-media-box img,
+    .lightbox-media-box video {
+        max-height: 48vh;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .lightbox-media-label {
+        top: 10px;
+        left: 10px;
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    .lightbox-caption {
+        font-size: 1.3rem;
+        margin-top: 0.8rem;
+    }
+
+    .lightbox-close {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        z-index: 10002;
+    }
+}
+
+@media (max-width: 480px) {
+    .lightbox-modal {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .lightbox-media-box {
+        max-height: 42vh;
+        border-radius: 8px;
+    }
+
+    .lightbox-media-box img,
+    .lightbox-media-box video {
+        max-height: 42vh;
+    }
+
+    .lightbox-caption {
+        font-size: 1.1rem;
     }
 }
 
