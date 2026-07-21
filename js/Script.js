@@ -344,7 +344,7 @@ const translations = {
 
         // art-portfolio
         "art-hero-subtitle": "ARTE 3D",
-        "art-hero-desc": "Modelado 3D de personajes y entornos para videojuegos: del esculpido en alta resolución a la integración en el motor de juego.",
+        "art-hero-desc": "Modelado 3D de personajes y entornos para videojuegos: del esculpido en alta resolución a la integración en motores de videojuegos.",
         "art-filter-all": "Todo",
         "art-filter-modeling": "Modelado y Personajes",
         "art-filter-vfx": "VFX",
