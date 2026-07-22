@@ -273,7 +273,7 @@ const translations = {
 
         // art-portfolio
         "art-hero-subtitle": "3D ART STATION",
-        "art-hero-desc": "Crafting immersive characters, environments, and visual stories for games and cinematic experiences.",
+        "art-hero-desc": "Game-Ready 3D modeling of characters and environments for video games up to game engine integration.",
         "art-filter-all": "All",
         "art-filter-modeling": "Modeling & Characters",
         "art-filter-vfx": "VFX",
@@ -344,7 +344,7 @@ const translations = {
 
         // art-portfolio
         "art-hero-subtitle": "ARTE 3D",
-        "art-hero-desc": "Modelado 3D de personajes y entornos para videojuegos: del esculpido en alta resolución a la integración en motores de videojuegos.",
+        "art-hero-desc": "Modelado 3D Game-Ready de personajes y entornos para videojuegos hasta la integración en motores de videojuegos.",
         "art-filter-all": "Todo",
         "art-filter-modeling": "Modelado y Personajes",
         "art-filter-vfx": "VFX",
