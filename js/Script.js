@@ -458,13 +458,21 @@ function initLightbox() {
     const lightboxCaption = lightbox.querySelector("#lightbox-caption");
     const closeBtn = lightbox.querySelector(".lightbox-close");
 
+    lightboxVideo.onerror = () => {
+        grid.className = "lightbox-media-grid single-media";
+        videoWrapper.style.display = "none";
+        if (lightboxImg.src) {
+            imgWrapper.style.display = "flex";
+        }
+    };
+
     function openLightbox(imgSrc, videoSrc, captionText, isVfx = false) {
         if (videoLabel) {
             videoLabel.textContent = isVfx ? "VFX / Animation" : "360° Turntable / Video";
         }
 
-        const hasImg = Boolean(imgSrc);
-        const hasVideo = Boolean(videoSrc);
+        const hasImg = Boolean(imgSrc && imgSrc.trim() !== "");
+        const hasVideo = Boolean(videoSrc && videoSrc.trim() !== "");
 
         if (hasImg && hasVideo) {
             grid.className = "lightbox-media-grid has-split";
@@ -484,14 +492,15 @@ function initLightbox() {
 
             lightboxVideo.src = videoSrc;
             lightboxVideo.play().catch(() => {});
-        } else if (hasImg) {
+        } else {
+            // Cover image only (no video player)
             grid.className = "lightbox-media-grid single-media";
             videoWrapper.style.display = "none";
             lightboxVideo.pause();
             lightboxVideo.src = "";
 
             imgWrapper.style.display = "flex";
-            lightboxImg.src = imgSrc;
+            lightboxImg.src = imgSrc || "";
             lightboxImg.alt = captionText || "";
         }
 
