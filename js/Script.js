@@ -252,6 +252,9 @@ const translations = {
         "dev-bento-badge-mobile": "Mobile Interface",
         "dev-bento-3-title": "Financial Interface Design",
         "dev-bento-3-desc": "Cross-platform mobile optimization",
+        "dev-bento-badge-web": "Web Platform",
+        "dev-bento-4-title": "Mixed Media Artist Portfolio",
+        "dev-bento-4-desc": "Interactive visual curation interface",
         "dev-section-about": "The developer",
         "dev-about-p1": "I bridge the gap between technical art and software engineering. My focus is on creating clean, scalable architectures that support high-impact visual experiences.",
         "dev-about-p2": "With a foundation in character art and technical pipelines, I approach development with a unique spatial and structural perspective.",
@@ -270,6 +273,7 @@ const translations = {
         "dev-contact-submit": "INITIALIZE PROJECT",
         "floating-toggle-btn-art": "Switch to Art Station",
         "floating-toggle-btn-cv-dev": "View Dev CV",
+        "lightbox-action": "Visit Project",
 
         // art-portfolio
         "art-hero-subtitle": "3D ART STATION",
@@ -323,6 +327,9 @@ const translations = {
         "dev-bento-badge-mobile": "Interfaz Móvil",
         "dev-bento-3-title": "Diseño de Interfaz Financiera",
         "dev-bento-3-desc": "Optimización móvil multiplataforma",
+        "dev-bento-badge-web": "Plataforma Web",
+        "dev-bento-4-title": "Portafolio de Artista Mixed Media",
+        "dev-bento-4-desc": "Interfaz interactiva de curaduría visual",
         "dev-section-about": "Sobre el Desarrollador",
         "dev-about-p1": "Conecto el arte técnico con la ingeniería de software. Mi enfoque está en crear arquitecturas limpias y escalables que sirvan de soporte para experiencias visuales de alto impacto.",
         "dev-about-p2": "Con sólida formación en arte de personajes y pipelines técnicos, abordo el desarrollo desde una perspectiva espacial y estructural única.",
@@ -341,6 +348,7 @@ const translations = {
         "dev-contact-submit": "INICIAR PROYECTO",
         "floating-toggle-btn-art": "Cambiar a Art Station",
         "floating-toggle-btn-cv-dev": "Ver CV Dev",
+        "lightbox-action": "Visitar Proyecto",
 
         // art-portfolio
         "art-hero-subtitle": "ARTE 3D",
@@ -444,6 +452,9 @@ function initLightbox() {
                     </div>
                 </div>
                 <div id="lightbox-caption" class="lightbox-caption"></div>
+                <a id="lightbox-action-btn" class="lightbox-action-btn" href="" target="_blank" rel="noopener noreferrer" data-translate="lightbox-action" style="display: none;">
+                    Visit Project
+                </a>
             </div>
         `;
         document.body.appendChild(lightbox);
@@ -456,6 +467,7 @@ function initLightbox() {
     const lightboxImg = lightbox.querySelector("#lightbox-img");
     const lightboxVideo = lightbox.querySelector("#lightbox-video");
     const lightboxCaption = lightbox.querySelector("#lightbox-caption");
+    const actionBtn = lightbox.querySelector("#lightbox-action-btn");
     const closeBtn = lightbox.querySelector(".lightbox-close");
 
     lightboxVideo.onerror = () => {
@@ -466,9 +478,15 @@ function initLightbox() {
         }
     };
 
-    function openLightbox(imgSrc, videoSrc, captionText, isVfx = false) {
+    function openLightbox(imgSrc, videoSrc, captionText, isVfx = false, redirectUrl = null) {
         if (videoLabel) {
-            videoLabel.textContent = isVfx ? "VFX / Animation" : "360° Turntable / Video";
+            if (isVfx) {
+                videoLabel.textContent = "VFX / Animation";
+            } else if (redirectUrl || document.body.classList.contains("dev-mode")) {
+                videoLabel.textContent = "Preview Web";
+            } else {
+                videoLabel.textContent = "360° Turntable / Video";
+            }
         }
 
         const hasImg = Boolean(imgSrc && imgSrc.trim() !== "");
@@ -502,6 +520,20 @@ function initLightbox() {
             imgWrapper.style.display = "flex";
             lightboxImg.src = imgSrc || "";
             lightboxImg.alt = captionText || "";
+        }
+
+        // Action Button logic
+        if (redirectUrl) {
+            actionBtn.href = redirectUrl;
+            actionBtn.style.display = "inline-flex";
+            // Set dynamic translation if language switcher is active
+            const currentLang = localStorage.getItem("selectedLanguage") || "en";
+            if (translations[currentLang] && translations[currentLang]["lightbox-action"]) {
+                actionBtn.innerHTML = translations[currentLang]["lightbox-action"];
+            }
+        } else {
+            actionBtn.href = "";
+            actionBtn.style.display = "none";
         }
 
         lightboxCaption.textContent = captionText || "";
@@ -550,8 +582,11 @@ function initLightbox() {
             const videoSrc = video?.getAttribute("src") || null;
             const category = card.dataset.category || "";
             const isVfx = category === "vfx" || (videoSrc && videoSrc.toLowerCase().includes("vfx"));
+            
+            // Get redirect link if it exists
+            const redirectUrl = card.getAttribute("data-link") || null;
 
-            openLightbox(imgSrc, videoSrc, captionText, isVfx);
+            openLightbox(imgSrc, videoSrc, captionText, isVfx, redirectUrl);
         });
     });
 }

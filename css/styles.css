@@ -9,6 +9,7 @@
     --accent-red-bright: #ff3c3c;
     --accent-dev: #00e5ff;
     --accent-dev-muted: #073b4c;
+    --accent-dev-bright: #7df9ff;
     --text-primary: #ffffff;
     --text-secondary: #888888;
     --glass-bg: rgba(10, 10, 10, 0.8);
@@ -165,9 +166,10 @@ body.dev-mode .project-card:hover {
     position: absolute;
     top: 25px; right: 25px;
     background: var(--accent-dev);
-    color: white;
+    color: #02040a;
     font-size: 0.65rem;
     font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
     padding: 5px 15px;
     border-radius: 50px;
     text-transform: uppercase;
@@ -1342,6 +1344,50 @@ body.dev-mode .lightbox-close:hover {
     color: #000;
     box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
 }
+
+/* Lightbox Action Button */
+.lightbox-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1.5rem;
+    padding: 12px 28px;
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red-bright);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.1);
+    z-index: 10002;
+}
+
+.lightbox-action-btn:hover {
+    background: var(--accent-red);
+    color: var(--text-primary);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+body.dev-mode .lightbox-action-btn {
+    border-color: var(--accent-dev);
+    color: var(--accent-dev);
+    background: rgba(0, 229, 255, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 229, 255, 0.1);
+}
+
+body.dev-mode .lightbox-action-btn:hover {
+    background: var(--accent-dev);
+    color: #000;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+}
+
 
 
 
