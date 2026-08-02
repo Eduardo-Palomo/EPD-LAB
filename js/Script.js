@@ -117,6 +117,7 @@ if (filterButtons.length > 0) {
 
 // Hover/Scroll Video Logic
 const isMobileOrTouch = window.matchMedia('(max-width: 768px)').matches || window.matchMedia('(pointer: coarse)').matches;
+const allVideoCards = document.querySelectorAll('.project-card, .bento-item');
 
 if (isMobileOrTouch) {
     // Mobile/Touch behavior: Play video when card enters viewport
@@ -128,7 +129,7 @@ if (isMobileOrTouch) {
     const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const card = entry.target;
-            const video = card.querySelector('.hover-video');
+            const video = card.querySelector('.hover-video, .bento-video');
             if (!video) return;
 
             if (entry.isIntersecting) {
@@ -153,8 +154,8 @@ if (isMobileOrTouch) {
         });
     }, videoObserverOptions);
 
-    projectCards.forEach(card => {
-        const video = card.querySelector('.hover-video');
+    allVideoCards.forEach(card => {
+        const video = card.querySelector('.hover-video, .bento-video');
         if (video) {
             videoObserver.observe(card);
         }
@@ -162,8 +163,8 @@ if (isMobileOrTouch) {
 } else {
     // Desktop behavior: Play video on hover
     let currentlyPlaying = null;
-    projectCards.forEach(card => {
-        const video = card.querySelector('.hover-video');
+    allVideoCards.forEach(card => {
+        const video = card.querySelector('.hover-video, .bento-video');
         if (video) {
             card.addEventListener('mouseenter', () => {
                 if (currentlyPlaying && currentlyPlaying !== video) {
